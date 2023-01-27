@@ -237,7 +237,7 @@ nav ul ul li:hover a {
 
 footer {
     position: absolute;
-    bottom: 15px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
 }
