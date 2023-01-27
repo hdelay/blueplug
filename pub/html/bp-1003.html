@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루플러그</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub js -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- left menu -->
+<aside>
+    <div class="side_top">
+        <h1 class="logo">블루 플러그</h1>
+        <a href="" class="menu_slide_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="">
+                    <span class="ico_dashboard"></span>
+                    <strong>대시보드</strong>
+                </a>
+            </li>
+            <li class="more">
+                <a href="javascript:void(0);">
+                    <span class="ico_system"></span>
+                    <strong>시스템</strong>
+                </a>
+                <ul>
+                    <li><a href="">계정관리</a></li>
+                    <li><a href="">메뉴관리</a></li>
+                    <li><a href="">코드관리</a></li>
+                    <li><a href="">접속로그조회</a></li>
+                    <li><a href="">체크리스트 관리</a></li>
+                    <li><a href="">체크리스트 할당</a></li>
+                    <li><a href="">체크현황</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="ico_object"></span>
+                    <strong>오브젝트</strong>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="ico_chargeadd"></span>
+                    <strong>충전정보생성</strong>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="ico_control"></span>
+                    <strong>관제</strong>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="ico_stationcheck"></span>
+                    <strong>충전소점검</strong>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="ico_mypage"></span>
+                    <strong>마이페이지</strong>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <p>COPYRIGHT © HYUNDAI KEFICO COMPANY. ALL RIGHTS RESERVED.</p>
+    </footer>
+</aside>
+<!-- //left menu -->
+
+<!-- right container -->
+<div class="container">
+    
+    <!-- header -->
+    <header>
+        <ul>
+            <li>
+                <span class="ico_time"></span>최종 접속일시
+                <div class="time_box">
+                    <span>2023년 01월 31일</span>
+                    <span>15:00:00</span>
+                </div>
+            </li>
+            <li>
+                <span class="ico_user"></span>
+                <strong>블루플러그</strong>님 환영합니다.
+            </li>
+            <li><button>로그아웃</button></li>
+        </ul>
+    </header>
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- 제목 -->
+        <div class="tit_box">
+            <h3>코드관리</h3>
+        </div>
+
+        <!-- 버튼 -->
+        <div class="btn_box_group right">
+            <div class="btn_box">
+                <button class="btn_gray">초기화</button>
+            </div>
+            <div class="btn_box">
+                <button class="btn_black">검색</button>
+            </div>
+        </div>
+
+        <!-- 검색박스 -->
+        <div class="search_box">
+            <div class="type_1">
+                <dl>
+                    <dt><label for="sel_01">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <select id="sel_01">
+                                <option value="">코드명</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="type_2">
+                <dl>
+                    <dt><label for="sel_02">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <select id="sel_02">
+                                <option value="">코드명</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_01">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_01">
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="type_3">
+                <dl>
+                    <dt><label for="sel_03">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <select id="sel_03">
+                                <option value="">코드명</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_02">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_02">
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_03">대분류코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_03">
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="type_4">
+                <dl>
+                    <dt><label for="sel_04">코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <select id="sel_04">
+                                <option value="">TOP</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_05">코드값</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_06">코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_06" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_07">영문코드명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_07" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 게시판 -->
+        <div class="btn_box_group between">
+            <div class="total">
+                TOTAL <strong>100</strong>건
+            </div>
+            <div class="right">
+                <div class="btn_box">
+                    <a href="" class="btn_grayline">엑셀일괄 업로드</a>
+                </div>
+                <div class="btn_box">
+                    <a href="" class="btn_grayline" download>엑셀일괄 다운로드</a>
+                </div>
+                <div class="btn_box">
+                    <a href="" class="btn_blue">신규등록</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tbl_box">
+            <table>
+                <caption>검색 결과 테이블</caption>
+                <colgroup>
+                    <col width="5%"/>
+                    <col width="10%"/>
+                    <col width="10%"/>
+                    <col width="9%"/>
+                    <col width="9%"/>
+                    <col width="7%"/>
+                    <col width="15%"/>
+                    <col width="15%"/>
+                    <col width="10%"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>상위코드명</th>
+                        <th>코드값</th>
+                        <th>코드명</th>
+                        <th>영문코드명</th>
+                        <th>하위코드 수</th>
+                        <th>비고</th>
+                        <th>설명</th>
+                        <th>등록일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000001</td>
+                        <td class="agn_l">권한</td>
+                        <td class="agn_l">userauth</td>
+                        <td>4</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000002</td>
+                        <td class="agn_l">사용자상태</td>
+                        <td class="agn_l">userauthus</td>
+                        <td>3</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000001</td>
+                        <td class="agn_l">권한</td>
+                        <td class="agn_l">userauth</td>
+                        <td>4</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000002</td>
+                        <td class="agn_l">사용자상태</td>
+                        <td class="agn_l">userauthus</td>
+                        <td>3</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000001</td>
+                        <td class="agn_l">권한</td>
+                        <td class="agn_l">userauth</td>
+                        <td>4</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000002</td>
+                        <td class="agn_l">사용자상태</td>
+                        <td class="agn_l">userauthus</td>
+                        <td>3</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000001</td>
+                        <td class="agn_l">권한</td>
+                        <td class="agn_l">userauth</td>
+                        <td>4</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000002</td>
+                        <td class="agn_l">사용자상태</td>
+                        <td class="agn_l">userauthus</td>
+                        <td>3</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000001</td>
+                        <td class="agn_l">권한</td>
+                        <td class="agn_l">userauth</td>
+                        <td>4</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="agn_l">TOP</td>
+                        <td>A000002</td>
+                        <td class="agn_l">사용자상태</td>
+                        <td class="agn_l">userauthus</td>
+                        <td>3</td>
+                        <td class="agn_l">-</td>
+                        <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
+                        <td>2023-01-31 00:00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="paging_box">
+            <ul>
+                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                <li class="on"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">100</a></li>
+                <li><a href="">1000</a></li>
+                <li><a href="">9</a></li>
+                <li><a href="">10</a></li>
+                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<!-- //right container -->
+
+</div>
+</body>
+</html>
