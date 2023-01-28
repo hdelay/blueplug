@@ -46,18 +46,8 @@ $(function(){
     // 팝업버튼
     let popBtn = $(".dialog-link");
     let popBody = $(".dialog");
-    let noteBtn = $(".note_link");
-    let noteBody = $(".note_dialog");
-    let quick_popBtn = $(".quick_link");
-    let quick_popBody = $(".quick_dialog");
     
     popBtn.click(function(e) {
-        let poptarget = $(this).attr('data-target');
-        $(poptarget).dialog("open");
-        popupOpenType = true; // html스크롤 조절불가능
-        e.preventDefault();
-    });
-    quick_popBtn.click(function(){
         let poptarget = $(this).attr('data-target');
         $(poptarget).dialog("open");
         popupOpenType = true; // html스크롤 조절불가능
@@ -85,32 +75,9 @@ $(function(){
         open: function(){
             $(this).parent().find('.ui-dialog-titlebar').remove();
             $('.pop_close').on('click', function(){
-                $(this).parent().parent().parent().dialog("close");
+                $(this).parent().parent().parent().parent().dialog("close");
                 popupOpenType = false; // html스크롤 조절가능
             });
-        }
-    });
-
-    // 퀵팝업 body
-    quick_popBody.dialog({
-        width: 'auto',
-        maxWidth: 420,
-        title: false, // 다이얼로그 제목
-        autoOpen: false,
-        show: {
-            effect: "fade",
-            duration: 100
-        },
-        modal: true,
-        buttons: [{
-                text: "닫기",
-                click: function() {
-                    $(this).dialog("close");
-                    popupOpenType = false; // html스크롤 조절가능
-                }
-            }],
-        open: function(){
-            $(this).parent().find('.ui-dialog-titlebar').remove();
         }
     });
 

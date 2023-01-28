@@ -116,237 +116,22 @@
 
         <!-- 제목 -->
         <div class="tit_box">
-            <h2>코드관리</h2>
+            <h2>팝업</h2>
         </div>
 
         <!-- 버튼 -->
-        <div class="btn_box_group right">
+        <div class="btn_box_group">
             <div class="btn_box">
-                <button class="btn_gray">초기화</button>
+                <button class="btn_blue dialog-link" data-target="#pop_1">메뉴 권한부여</button>
             </div>
             <div class="btn_box">
-                <button class="btn_black">검색</button>
+                <button class="btn_blue dialog-link" data-target="#pop_add">신규 코드생성</button>
             </div>
-        </div>
-
-        <!-- 검색박스 -->
-        <div class="search_box">
-            <div class="type_4">
-                <dl>
-                    <dt><label for="sel_04">상위코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <select id="sel_04">
-                                <option value="">TOP</option>
-                            </select>
-                        </div>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><label for="inp_05">코드값</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
-                        </div>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><label for="inp_06">코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_06" placeholder="검색어를 입력해 주세요.">
-                        </div>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><label for="inp_07">영문코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_07" placeholder="검색어를 입력해 주세요.">
-                        </div>
-                    </dd>
-                </dl>
+            <div class="btn_box">
+                <button class="btn_blue dialog-link" data-target="#pop_modi">코드 수정</button>
             </div>
-        </div>
-
-        <!-- 게시판 -->
-        <div class="tbl_group">
-            <div class="btn_box_group between">
-                <div class="total">
-                    TOTAL <strong>100</strong>건
-                </div>
-                <div class="right">
-                    <div class="btn_box">
-                        <a href="" class="btn_grayline">엑셀일괄 업로드</a>
-                    </div>
-                    <div class="btn_box">
-                        <a href="" class="btn_grayline" download>엑셀일괄 다운로드</a>
-                    </div>
-                    <div class="btn_box">
-                        <a href="javascript:void(0);" class="btn_blue dialog-link" data-target="#pop_add">신규등록</a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="tbl_box">
-                <table>
-                    <caption>검색 결과 테이블</caption>
-                    <colgroup>
-                        <col width="5%"/>
-                        <col width="10%"/>
-                        <col width="10%"/>
-                        <col width="9%"/>
-                        <col width="9%"/>
-                        <col width="7%"/>
-                        <col width="15%"/>
-                        <col width="15%"/>
-                        <col width="10%"/>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>상위코드명</th>
-                            <th>코드값</th>
-                            <th>코드명</th>
-                            <th>영문코드명</th>
-                            <th>하위코드 수</th>
-                            <th>비고</th>
-                            <th>설명</th>
-                            <th>등록일시</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="dialog-link" data-target="#pop_modi">
-                            <td>1</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000001</td>
-                            <td class="agn_l">권한</td>
-                            <td class="agn_l">userauth</td>
-                            <td>4</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">코드수정 클릭</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr class="dialog-link" data-target="#pop_downcode">
-                            <td>2</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000002</td>
-                            <td class="agn_l">사용자상태</td>
-                            <td class="agn_l">userauthus</td>
-                            <td>3</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">하위코드 클릭</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000001</td>
-                            <td class="agn_l">권한</td>
-                            <td class="agn_l">userauth</td>
-                            <td>4</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000002</td>
-                            <td class="agn_l">사용자상태</td>
-                            <td class="agn_l">userauthus</td>
-                            <td>3</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000001</td>
-                            <td class="agn_l">권한</td>
-                            <td class="agn_l">userauth</td>
-                            <td>4</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000002</td>
-                            <td class="agn_l">사용자상태</td>
-                            <td class="agn_l">userauthus</td>
-                            <td>3</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000001</td>
-                            <td class="agn_l">권한</td>
-                            <td class="agn_l">userauth</td>
-                            <td>4</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000002</td>
-                            <td class="agn_l">사용자상태</td>
-                            <td class="agn_l">userauthus</td>
-                            <td>3</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000001</td>
-                            <td class="agn_l">권한</td>
-                            <td class="agn_l">userauth</td>
-                            <td>4</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 권한을 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="agn_l">TOP</td>
-                            <td>A000002</td>
-                            <td class="agn_l">사용자상태</td>
-                            <td class="agn_l">userauthus</td>
-                            <td>3</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 사용자의 계정 상태를 정의한다.</td>
-                            <td>2023-01-31 00:00:00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="paging_box">
-                <ul>
-                    <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
-                    <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
-                    <li class="on"><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">10</a></li>
-                    <li><a href="">100</a></li>
-                    <li><a href="">1000</a></li>
-                    <li><a href="">9</a></li>
-                    <li><a href="">10</a></li>
-                    <li class="next"><a href="" title="다음페이지로 이동"></a></li>
-                    <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
-                </ul>
+            <div class="btn_box">
+                <button class="btn_blue dialog-link" data-target="#pop_downcode">하위코드 보기</button>
             </div>
         </div>
 
@@ -354,6 +139,166 @@
 
 </div>
 <!-- //right container -->
+
+</div>
+
+<!-- 메뉴 권한부여 팝업 -->
+<div id="pop_1" class="dialog">
+
+    <div class="pop_header">
+        <div class="tit_box">
+            <h3>메뉴 권한부여</h3>
+        </div>
+    </div>
+
+    <div class="pop_content">
+
+        <!-- pop 검색박스 -->
+        <div class="pop_search_box">
+            <div class="type_1">
+                <dl>
+                    <dt><label for="sel_01">메뉴명</label></dt>
+                    <dd>
+                        시스템
+                        <!-- <div class="form_box">
+                            <input type="text" id="inp_01" placeholder="검색어를 입력해 주세요.">
+                        </div> -->
+                    </dd>
+                </dl>
+            </div>
+            <div class="type_1">
+                <dl>
+                    <dt><label for="inp_02">URL</label></dt>
+                    <dd>/system</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="txt_danger">* 파일 다운로드 권한은 읽기 권한을 부여하여야 사용 가능합니다.</div>
+        <!-- 게시판 -->
+        <div class="tbl_group">
+    
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="20%"/>
+                        <col width="80%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>권한명</th>
+                            <th>부여권한 목록</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>시스템관리자</td>
+                            <td class="agn_l">
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_01">
+                                        <label for="chk_01">모든 권한</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_02">
+                                        <label for="chk_02">읽기</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_03">
+                                        <label for="chk_03">파일 다운로드</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_04">
+                                        <label for="chk_04">쓰기/수정하기</label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>총괄관리자</td>
+                            <td class="agn_l">
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_05">
+                                        <label for="chk_05">모든 권한</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_06">
+                                        <label for="chk_06">읽기</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_07">
+                                        <label for="chk_07">파일 다운로드</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_08">
+                                        <label for="chk_08">쓰기/수정하기</label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>일반관리자</td>
+                            <td class="agn_l">
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_09">
+                                        <label for="chk_09">모든 권한</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_10">
+                                        <label for="chk_10">읽기</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_11">
+                                        <label for="chk_11">파일 다운로드</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_12">
+                                        <label for="chk_12">쓰기/수정하기</label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>점검자</td>
+                            <td class="agn_l">
+                                <div class="chk_box">
+                                    <span>
+                                        <input type="checkbox" id="chk_01">
+                                        <label for="chk_01">모든 권한</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_02">
+                                        <label for="chk_02">읽기</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_03">
+                                        <label for="chk_03">파일 다운로드</label>
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" id="chk_04">
+                                        <label for="chk_04">쓰기/수정하기</label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pop_footer">
+        <div class="btn_box_group center">
+            <div class="btn_box">
+                <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+            </div>
+        </div>
+    </div>
 
 </div>
 

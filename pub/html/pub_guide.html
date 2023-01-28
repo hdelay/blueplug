@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블가이드</title>
+
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #333;}
+        ul, ol, li {list-style: none;}
+        header {
+            display: flex;
+            flex-direction: column;
+            position: sticky !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            height: auto;
+        }
+        header h1 {
+            width: 100%;
+        }
+        header h1 a {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #666;
+            font-weight: 300;
+            font-size: 20px;
+            color: #fff;
+        }
+        header h1 a span {
+            display: block;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 50px;
+            overflow-x: inherit;
+            overflow-y: inherit;
+            background-color: #000;
+        }
+        header ul {
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            justify-content: center;
+        }
+        header ul li {
+            padding: 0;
+        }
+        header ul li a {
+            display: flex;
+            padding: 10px 20px;
+            white-space: nowrap;
+            color: #fff;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .item-box {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            border: 1px solid transparent;
+        }
+        .item-box > dt {
+            display: flex;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .item-box:hover {
+            border: 1px solid #000;
+        }
+        .item-box:hover > dt::after  {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #2F86EE;
+            border-radius: 50%;
+        }
+        @media all and (max-width: 780px) {
+            header nav {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrap">
+    
+    <header>
+        <h1><a href=""><span>블루플러그</span> 퍼블리싱 가이드</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#content_01">타이포</a></li>
+                <li><a href="#content_02">버튼</a></li>
+                <li><a href="#content_03">폼 Form</a></li>
+                <li><a href="#content_04">테이블</a></li>
+                <li><a href="#content_05">페이지네이션</a></li>
+                <li><a href="#content_06">팝업</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <dl id="content_01" class="item-box">
+            <dt>타이포</dt>
+            <dd>
+                <dl class="item-content">
+                    <dt>제목</dt>
+                    <dd>
+                        <!-- 제목 -->
+                        <div class="tit_box">
+                            <h2>코드관리</h2>
+                            <span>데이터 자동 업데이트(10s) : <strong>2021.01.31 15:00:00</strong></span>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="item-content">
+                    <dt>font</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <div class="txt_danger">* 파일 다운로드 권한은 읽기 권한을 부여하여야 사용 가능합니다.</div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <dl id="content_02" class="item-box">
+            <dt>버튼</dt>
+            <dd>
+                <dl class="item-content">
+                    <dt>텍스트버튼<br/></dt>
+                    <dd>
+                        <!-- 버튼 -->
+                        <div class="btn_box_group">
+                            <div class="btn_box">
+                                <button class="btn_gray">초기화</button>
+                            </div>
+                            <div class="btn_box">
+                                <button class="btn_black">검색</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 버튼 -->
+                        <div class="btn_box_group right">
+                            <div class="btn_box">
+                                <button class="btn_gray">초기화</button>
+                            </div>
+                            <div class="btn_box">
+                                <button class="btn_black">검색</button>
+                            </div>
+                        </div>
+
+                        <!-- 버튼 -->
+                        <div class="btn_box_group between">
+                            <div class="total">
+                                TOTAL <strong>100</strong>건
+                            </div>
+                            <div class="right">
+                                <div class="btn_box">
+                                    <a href="" class="btn_grayline">엑셀일괄 업로드</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="" class="btn_grayline" download>엑셀일괄 다운로드</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="" class="btn_blue">신규등록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <dl id="content_03" class="item-box">
+            <dt>폼 Form<br/></dt>
+            <dd>
+                검색박스
+                <!-- 검색박스 -->
+                <div class="search_box">
+                    <div class="type_1">
+                        <dl>
+                            <dt><label for="sel_01">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_01">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_2">
+                        <dl>
+                            <dt><label for="sel_02">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_02">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_01">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_3">
+                        <dl>
+                            <dt><label for="sel_03">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_03">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_02">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_02">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_03">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_03">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_4">
+                        <dl>
+                            <dt><label for="sel_04">코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_04">
+                                        <option value="">TOP</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_05">코드값</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_06">코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_06" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_07">영문코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_07" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                팝업 검색박스
+                <!-- pop 검색박스 -->
+                <div class="pop_search_box">
+                    <div class="type_1">
+                        <dl>
+                            <dt><label for="sel_01">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_01">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_2">
+                        <dl>
+                            <dt><label for="sel_02">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_02">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_01">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_3">
+                        <dl>
+                            <dt><label for="sel_03">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_03">
+                                        <option value="">코드명</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_02">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_02">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_03">대분류코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_03">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="type_4">
+                        <dl>
+                            <dt><label for="sel_04">코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <select id="sel_04">
+                                        <option value="">TOP</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_05">코드값</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_06">코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_06" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="inp_07">영문코드명</label></dt>
+                            <dd>
+                                <div class="form_box">
+                                    <input type="text" id="inp_07" placeholder="검색어를 입력해 주세요.">
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                체크박스
+                <div class="chk_box">
+                    <span>
+                        <input type="checkbox" id="chk_01">
+                        <label for="chk_01">선택함</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_02">
+                        <label for="chk_02">선택안함</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_03" class="checked" disabled>
+                        <label for="chk_03">선택함(class추가 disabled)</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" id="chk_04" disabled>
+                        <label for="chk_04">선택안함(disabled)</label>
+                    </span>
+                </div>
+
+                라디오박스
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_01" name="rdo_group_01" checked>
+                        <label for="radio_01">선택함</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_02" name="rdo_group_01">
+                        <label for="radio_02">선택안함</label>
+                    </span>
+                </div>
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_03" name="rdo_group_01" class="checked" disabled>
+                        <label for="radio_03">선택함(class추가 disabled)</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_04" name="rdo_group_01" disabled>
+                        <label for="radio_04">선택안함(disabled)</label>
+                    </span>
+                </div>
+                
+            </dd>
+        </dl>
+
+        <dl id="content_04" class="item-box">
+            <dt>테이블</dt>
+            <dd>
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_01" name="rdo_group_01" checked>
+                        <label for="radio_01">선택함</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_02" name="rdo_group_01">
+                        <label for="radio_02">선택안함</label>
+                    </span>
+                </div>
+                <div class="rdo_box">
+                    <span>
+                        <input type="radio" id="radio_03" name="rdo_group_01" class="checked" disabled>
+                        <label for="radio_03">선택함(class추가 disabled)</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="radio_04" name="rdo_group_01" disabled>
+                        <label for="radio_04">선택안함(disabled)</label>
+                    </span>
+                </div>
+            </dd>
+        </dl>
+
+        <dl id="content_05" class="item-box">
+            <dt>페이지네이션</dt>
+            <dd>
+                <div class="paging_box">
+                    <ul>
+                        <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                        <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                        <li class="on"><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">10</a></li>
+                        <li><a href="">100</a></li>
+                        <li><a href="">1000</a></li>
+                        <li><a href="">9</a></li>
+                        <li><a href="">10</a></li>
+                        <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                        <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    
+</div>
+
+</body>
+</html>

@@ -351,4 +351,73 @@ header ul li button:hover {
 .content {
     padding: 25px 40px;
     box-sizing: border-box;
+    min-height: calc(100vh - 50px);
+}
+
+/* 팝업 */
+.ui-dialog .ui-dialog-content {
+    min-width: 900px;
+    max-width: 900px;
+    padding: 20px;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-size: 13px;
+}
+.ui-widget.ui-widget-content {
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 4px rgb(0 0 0 / 17%);
+}
+.ui-dialog .ui-dialog-buttonpane {
+    display: flex;
+    position: absolute;
+    top: 22px;
+    right: 23px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background: url(../images/ico/ico_close.svg) no-repeat center;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+.ui-dialog .ui-resizable-se,
+.ui-dialog .ui-resizable-sw,
+.ui-dialog .ui-resizable-ne,
+.ui-dialog .ui-resizable-nw,
+.ui-dialog .ui-resizable-e,
+.ui-dialog .ui-resizable-n {
+    width: 0;
+    height: 0;
+}
+.ui-dialog .ui-dialog-content .tbl_group {
+    overflow: hidden;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+}
+.ui-dialog .ui-dialog-content .tbl_box {
+    overflow-y: auto;
+    max-height: calc(100vh - 470px)
+}
+.ui-dialog .ui-dialog-content .tbl_box table tbody td {
+    padding: 10px;
+}
+.ui-dialog .ui-dialog-content .tbl_box table tbody tr:last-child td {
+    border-bottom: 0;
+}
+.ui-dialog .ui-dialog-content .tbl_box table thead th {
+    border-top: 0;
+    padding: 10px;
+}
+.pop_footer {
+    margin-top: 20px;
 }
