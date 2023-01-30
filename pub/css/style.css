@@ -23,11 +23,11 @@ aside {
 }
 .side_top {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
     padding: 0 35px;
     box-sizing: border-box;
+    margin: 65px 0 15px;
 }
 .side_top .logo {
     width: 144px;
@@ -37,6 +37,9 @@ aside {
 }
 .side_top .menu_slide_btn {
     display: flex;
+    position: absolute;
+    top: 20px;
+    left: 30px;
     flex-direction: column;
     justify-content: space-between;
     width: 20px;
@@ -50,15 +53,20 @@ aside {
     background-color: #949494;
     transition: .2s;
 }
+.wrap.on aside .side_top .menu_slide_btn {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+}
 .wrap.on aside .side_top .menu_slide_btn span:nth-of-type(1),
 .wrap.on aside .side_top .menu_slide_btn span:nth-of-type(3) {
-  width: 10px;
+  width: 15px;
 }
 .wrap.on aside .side_top .menu_slide_btn span:nth-of-type(1) {
-  transform: translate(10px, 5px) rotate(45deg);
+  transform: translate(17px, 9px) rotate(45deg);
 }
 .wrap.on aside .side_top .menu_slide_btn span:nth-of-type(3) {
-  transform : translate(10px, -5px) rotate(-45deg);
+  transform : translate(17px, -9px) rotate(-45deg);
 }
 
 /* 메뉴 슬라이드 시 */
@@ -67,15 +75,19 @@ aside {
     width: 70px;
 }
 .wrap.on aside .side_top {
-    flex-direction: column;
     padding: 0;
     height: auto;
+    margin: 0;
 }
 .wrap.on aside .side_top .logo {
-    background: url(../images/logo_column.png) no-repeat center;
+    display: none;
+    /* background: url(../images/logo_column.png) no-repeat center;
     background-size: 100% auto;
     width: 50px;
-    height: 50px;
+    height: 50px; */
+}
+.wrap.on aside .side_top .menu_slide_btn {
+    position: inherit;
 }
 .wrap.on aside .side_top .menu_slide_btn span {
     background-color: #0F2D76;
@@ -95,20 +107,25 @@ aside {
     display: none;
 }
 .wrap.on aside nav > ul > li.more > a::after {
-    right: 15px;
+    right: 10px;
     transform: translateY(-50%) rotate(-45deg);
 }
 /* 2depth */
 .wrap.on aside nav ul ul {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 80px;
     background-color: #fff;
     border-radius: 5px;
     width: 150px;
+    height: 0px;
+    margin: 0;
+}
+.wrap.on aside nav ul li.on ul {
+    height: auto;
     padding: 5px;
     box-shadow: 2px 0px 8px 2px rgb(0 0 0 / 16%);
-    margin: 0;
 }
 .wrap.on aside nav ul ul::before {
     display: none;
@@ -119,7 +136,7 @@ aside {
 
 nav {
     overflow-y: auto;
-    max-height: calc(100vh - 50px);
+    max-height: calc(100vh - 180px);
     width: calc(100% + 18px);
 }
 /* 1deth */
@@ -127,7 +144,6 @@ nav > ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 20px;
 }
 nav > ul > li {
     padding: 0 48px 0 30px;
@@ -161,7 +177,7 @@ nav > ul > li.more.on > a::after {
 nav > ul > li > a > strong {
     font-size: 14px;
     font-weight: 400;
-    color: #949494;
+    color: #333;
     transition: .2s;
 }
 nav > ul > li.on > a strong {
@@ -172,10 +188,15 @@ nav > ul > li > a:hover > strong {
 }
 nav > ul > li > a > span {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: no-repeat center;
+    border-radius: 5px;
     transition: .2s;
+}
+nav > ul > li:hover > a > span,
+nav > ul > li.on > a > span {
+    background-color: #0F2D76;
 }
 nav > ul > li > a .ico_dashboard {background-image: url(../images/ico/ico_dashboard_off.svg);}
 nav > ul > li > a:hover .ico_dashboard {background-image: url(../images/ico/ico_dashboard_on.svg);}
@@ -189,9 +210,9 @@ nav > ul > li.on > a .ico_object {background-image: url(../images/ico/ico_object
 nav > ul > li > a .ico_chargeadd {background-image: url(../images/ico/ico_chargeadd_off.svg);}
 nav > ul > li > a:hover .ico_chargeadd {background-image: url(../images/ico/ico_chargeadd_on.svg);}
 nav > ul > li.on > a .ico_chargeadd {background-image: url(../images/ico/ico_chargeadd_on.svg);}
-nav > ul > li > a .ico_control {background-image: url(../images/ico/ico_control_off.svg); background-size: 100% auto;}
-nav > ul > li > a:hover .ico_control {background-image: url(../images/ico/ico_control_on.svg); background-size: 100% auto;}
-nav > ul > li.on > a .ico_control {background-image: url(../images/ico/ico_control_on.svg); background-size: 100% auto;}
+nav > ul > li > a .ico_control {background-image: url(../images/ico/ico_control_off.svg); background-size: 80% auto;}
+nav > ul > li > a:hover .ico_control {background-image: url(../images/ico/ico_control_on.svg); background-size: 80% auto;}
+nav > ul > li.on > a .ico_control {background-image: url(../images/ico/ico_control_on.svg); background-size: 80% auto;}
 nav > ul > li > a .ico_stationcheck {background-image: url(../images/ico/ico_stationcheck_off.svg);}
 nav > ul > li > a:hover .ico_stationcheck {background-image: url(../images/ico/ico_stationcheck_on.svg);}
 nav > ul > li.on > a .ico_stationcheck {background-image: url(../images/ico/ico_stationcheck_on.svg);}
@@ -201,11 +222,17 @@ nav > ul > li.on > a .ico_mypage {background-image: url(../images/ico/ico_mypage
 
 /* 2depth */
 nav ul ul {
-    display: none;
+    display: block;
+    overflow: hidden;
+    height: 0px;
     position: relative;
-    margin: 10px 0;
     padding: 0 0 0 30px;
     box-sizing: border-box;
+    transition: .2s;
+}
+nav ul li.on ul {
+    height: auto;
+    margin: 10px 0;
 }
 nav ul ul::before {
     content: "";
@@ -227,7 +254,7 @@ nav ul ul li a {
     border-radius: 5px;
     font-weight: 200;
     font-size: 13px;
-    color: #949494;
+    color: #333;
 }
 nav ul ul li:hover a {
     font-weight: 400;
@@ -237,7 +264,7 @@ nav ul ul li:hover a {
 
 footer {
     position: absolute;
-    bottom: 40px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -355,22 +382,27 @@ header ul li button:hover {
 }
 
 /* 팝업 */
-.ui-dialog .ui-dialog-content {
+.pop_box_group {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+.pop_box_group .pop_box {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     min-width: 900px;
     max-width: 900px;
-    padding: 20px;
-}
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-    font-size: 13px;
-}
-.ui-widget.ui-widget-content {
-    border-radius: 10px;
     box-shadow: 0px 0px 9px 4px rgb(0 0 0 / 17%);
 }
-.ui-dialog .ui-dialog-buttonpane {
+.pop_box_group .pop_box .pop_header .close {
     display: flex;
     position: absolute;
     top: 22px;
@@ -379,42 +411,31 @@ header ul li button:hover {
     padding: 0;
     margin: 0;
 }
-.ui-dialog .ui-dialog-buttonpane button {
+.pop_box_group .pop_box .pop_header .close button {
     display: flex;
-    margin: 0;
-    padding: 0;
     background: url(../images/ico/ico_close.svg) no-repeat center;
     text-indent: -9999px;
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    border: none;
+    cursor: pointer;
 }
-.ui-dialog .ui-resizable-se,
-.ui-dialog .ui-resizable-sw,
-.ui-dialog .ui-resizable-ne,
-.ui-dialog .ui-resizable-nw,
-.ui-dialog .ui-resizable-e,
-.ui-dialog .ui-resizable-n {
-    width: 0;
-    height: 0;
-}
-.ui-dialog .ui-dialog-content .tbl_group {
+.pop_box .tbl_group {
     overflow: hidden;
     border: 1px solid #d4d4d4;
     border-radius: 10px;
 }
-.ui-dialog .ui-dialog-content .tbl_box {
+.pop_box .tbl_box {
     overflow-y: auto;
     max-height: calc(100vh - 470px)
 }
-.ui-dialog .ui-dialog-content .tbl_box table tbody td {
+.pop_box .tbl_box table tbody td {
     padding: 10px;
 }
-.ui-dialog .ui-dialog-content .tbl_box table tbody tr:last-child td {
+.pop_box .tbl_box table tbody tr:last-child td {
     border-bottom: 0;
 }
-.ui-dialog .ui-dialog-content .tbl_box table thead th {
+.pop_box .tbl_box table thead th {
     border-top: 0;
     padding: 10px;
 }
