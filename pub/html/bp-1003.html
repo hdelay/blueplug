@@ -7,13 +7,7 @@
     <title>블루플러그</title>
 
     <!-- pub css -->
-    <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- pub js -->
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script src="../js/common.js"></script>
 
 </head>
 <body>
@@ -183,7 +177,7 @@
                         <a href="" class="btn_grayline" download>엑셀일괄 다운로드</a>
                     </div>
                     <div class="btn_box">
-                        <a href="javascript:void(0);" class="btn_blue dialog-link" data-target="#pop_add">신규등록</a>
+                        <a href="javascript:void(0);" class="btn_blue pop_open" data-target="#pop_add">신규등록</a>
                     </div>
                 </div>
             </div>
@@ -216,7 +210,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="dialog-link" data-target="#pop_modi">
+                        <tr class="pop_open" data-target="#pop_modi">
                             <td>1</td>
                             <td class="agn_l">TOP</td>
                             <td>A000001</td>
@@ -227,7 +221,7 @@
                             <td class="agn_l">코드수정 클릭</td>
                             <td>2023-01-31 00:00:00</td>
                         </tr>
-                        <tr class="dialog-link" data-target="#pop_downcode">
+                        <tr class="pop_open" data-target="#pop_downcode">
                             <td>2</td>
                             <td class="agn_l">TOP</td>
                             <td>A000002</td>
@@ -358,96 +352,103 @@
 </div>
 
 <!-- 신규 코드생성 팝업 -->
-<div id="pop_add" class="dialog">
+<div id="pop_add" class="pop_box_group">
 
-    <div class="pop_header">
-        <div class="tit_box">
-            <h3>신규 코드생성</h3>
-        </div>
-    </div>
-
-    <div class="pop_content">
-
-        <!-- pop 검색박스 -->
-        <div class="pop_search_box">
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_01">상위코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_01" value="TOP" disabled>
-                        </div>
-                    </dd>
-                </dl>
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>신규 코드생성</h3>
             </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_02">코드값</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_02" value="A000001">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_03">코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_03" value="권한">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_04">영문코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_04" value="userauth">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_05">비고</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_05" placeholder="클릭하여 값을 입력하세요.">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_06">설명(KOR)</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_06" value="시스템 사용자의 권한을 정의한다.">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_07">설명(ENG)</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_07" value="Defines the authority of system user">
-                        </div>
-                    </dd>
-                </dl>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="pop_footer">
-        <div class="btn_box_group center">
-            <div class="btn_box">
-                <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+    
+        <div class="pop_content">
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">상위코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="TOP" disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_02">코드값</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" value="A000001">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_03">코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_03" value="권한">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_04">영문코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_04" value="userauth">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_05">비고</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_05" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_06">설명(KOR)</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_06" value="시스템 사용자의 권한을 정의한다.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_07">설명(ENG)</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_07" value="Defines the authority of system user">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
             </div>
         </div>
     </div>
@@ -455,109 +456,116 @@
 </div>
 
 <!-- 코드 수정 팝업 -->
-<div id="pop_modi" class="dialog">
+<div id="pop_modi" class="pop_box_group">
 
-    <div class="pop_header">
-        <div class="tit_box">
-            <h3>코드 수정</h3>
-        </div>
-    </div>
-
-    <div class="pop_content">
-
-        <!-- pop 검색박스 -->
-        <div class="pop_search_box">
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_01">상위코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_01" value="TOP" disabled>
-                        </div>
-                    </dd>
-                </dl>
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>코드 수정</h3>
             </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_02">코드값</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_02" value="A000001">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_03">코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_03" value="권한">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_04">영문코드명</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_04" value="userauth">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_05">비고</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_05">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_05">하위코드 수</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_051" disabled>
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_06">설명(KOR)</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_06" value="시스템 사용자의 권한을 정의한다.">
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_07">설명(ENG)</label></dt>
-                    <dd>
-                        <div class="form_box">
-                            <input type="text" id="inp_07" value="Defines the authority of system user">
-                        </div>
-                    </dd>
-                </dl>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="pop_footer">
-        <div class="btn_box_group center">
-            <div class="btn_box">
-                <a href="javascript:void(0);" class="btn_b_grayline pop_close">삭제</a>
+    
+        <div class="pop_content">
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">상위코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="TOP" disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_02">코드값</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" value="A000001">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_03">코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_03" value="권한">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_04">영문코드명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_04" value="userauth">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_05">비고</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_05">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_05">하위코드 수</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_051" disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_06">설명(KOR)</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_06" value="시스템 사용자의 권한을 정의한다.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_07">설명(ENG)</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_07" value="Defines the authority of system user">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
             </div>
-            <div class="btn_box">
-                <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_b_grayline pop_close">삭제</a>
+                </div>
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
             </div>
         </div>
     </div>
@@ -565,122 +573,132 @@
 </div>
 
 <!-- 하위코드 보기 팝업 -->
-<div id="pop_downcode" class="dialog">
+<div id="pop_downcode" class="pop_box_group">
 
-    <div class="pop_header">
-        <div class="tit_box">
-            <h3>하위코드 보기</h3>
-        </div>
-    </div>
-
-    <div class="pop_content">
-
-        <!-- pop 검색박스 -->
-        <div class="pop_search_box">
-            <div class="type_1">
-                <dl>
-                    <dt><label for="sel_01">코드값</label></dt>
-                    <dd>A000001</dd>
-                </dl>
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>하위코드 보기</h3>
             </div>
-            <div class="type_1">
-                <dl>
-                    <dt><label for="inp_02">코드명</label></dt>
-                    <dd>권한</dd>
-                </dl>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
             </div>
         </div>
-
-        <!-- 게시판 -->
-        <div class="tbl_group">
     
-            <div class="tbl_box">
-                <table>
-                    <caption>테이블</caption>
-                    <colgroup>
-                        <col width="5%"/>
-                        <col width="15%"/>
-                        <col width="15%"/>
-                        <col width="15%"/>
-                        <col width="15%"/>
-                        <col width="*"/>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>코드값</th>
-                            <th>코드명</th>
-                            <th>영문코드명</th>
-                            <th>비고</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>90</td>
-                            <td class="agn_l">시스템관리자</td>
-                            <td>sysmaster</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 최고 관리자</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>60</td>
-                            <td class="agn_l">총괄관리자</td>
-                            <td>admin</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 총괄 관리자</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>30</td>
-                            <td class="agn_l">일반관리자</td>
-                            <td>user</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">시스템 일반 관리자(사용자)</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>10</td>
-                            <td class="agn_l">점검자</td>
-                            <td>patrol</td>
-                            <td class="agn_l">-</td>
-                            <td class="agn_l">충전기 점검자(패트롤)</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td class="agn_l"></td>
-                            <td></td>
-                            <td class="agn_l"></td>
-                            <td class="agn_l"></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td class="agn_l"></td>
-                            <td></td>
-                            <td class="agn_l"></td>
-                            <td class="agn_l"></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="pop_content">
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="sel_01">코드값</label></dt>
+                        <dd>A000001</dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_02">코드명</label></dt>
+                        <dd>권한</dd>
+                    </dl>
+                </div>
             </div>
-
+    
+            <!-- 게시판 -->
+            <div class="tbl_group">
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%"/>
+                            <col width="15%"/>
+                            <col width="15%"/>
+                            <col width="15%"/>
+                            <col width="15%"/>
+                            <col width="*"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>코드값</th>
+                                <th>코드명</th>
+                                <th>영문코드명</th>
+                                <th>비고</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>90</td>
+                                <td class="agn_l">시스템관리자</td>
+                                <td>sysmaster</td>
+                                <td class="agn_l">-</td>
+                                <td class="agn_l">시스템 최고 관리자</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>60</td>
+                                <td class="agn_l">총괄관리자</td>
+                                <td>admin</td>
+                                <td class="agn_l">-</td>
+                                <td class="agn_l">시스템 총괄 관리자</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>30</td>
+                                <td class="agn_l">일반관리자</td>
+                                <td>user</td>
+                                <td class="agn_l">-</td>
+                                <td class="agn_l">시스템 일반 관리자(사용자)</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>10</td>
+                                <td class="agn_l">점검자</td>
+                                <td>patrol</td>
+                                <td class="agn_l">-</td>
+                                <td class="agn_l">충전기 점검자(패트롤)</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                                <td class="agn_l"></td>
+                                <td></td>
+                                <td class="agn_l"></td>
+                                <td class="agn_l"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                                <td class="agn_l"></td>
+                                <td></td>
+                                <td class="agn_l"></td>
+                                <td class="agn_l"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+    
         </div>
-
-    </div>
-
-    <div class="pop_footer">
-        <div class="btn_box_group center">
-            <div class="btn_box">
-                <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
             </div>
         </div>
     </div>
 
 </div>
+
+<!-- pub js -->
+<script src="../js/common.js" defer></script>
 
 </body>
 </html>

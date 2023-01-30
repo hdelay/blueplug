@@ -1,19 +1,5 @@
-
-let beforeScrollPosition = 0; 
-let popupOpenType = false;
-
-// 팝업 뒤 html 스크롤 조정가능여부
-window.addEventListener('scroll', function() {
-    const htmlEl = document.getElementsByTagName('html')[0];
-    
-    if(popupOpenType) {
-        htmlEl.scrollTop = beforeScrollPosition;
-    } else {
-        beforeScrollPosition = htmlEl.scrollTop;
-    }
-});
-
 window.onload = function(){
+    
     // 메뉴 슬라이드 버튼
     const menu_slide_btn = document.querySelector('.menu_slide_btn');
     menu_slide_btn.addEventListener('click', function(e) {
@@ -45,15 +31,13 @@ window.onload = function(){
             targetID = this.getAttribute('data-target');
             document.querySelector(targetID).style.display = 'flex';
         });
-        popupOpenType = true; // html스크롤 조절불가능
     }
-
+    
     // 팝업 닫기
-    for(let j = 0; j < target.length; j++){
-        btnPopClose.addEventListener('click', function(){
+    for(let j = 0; j < btnPopClose.length; j++){
+        btnPopClose[j].addEventListener('click', function(){
             this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
         });
-        popupOpenType = false; // html스크롤 조절가능
     }
 }
 
