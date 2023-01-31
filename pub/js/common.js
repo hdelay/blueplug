@@ -39,5 +39,39 @@ window.onload = function(){
             this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
         });
     }
+
+    // 커스텀 select
+    const label = document.querySelectorAll('.label');
+    let sel;
+    label.forEach(function(lb){
+        lb.addEventListener('click', e => {
+            let optionList = lb.nextElementSibling;
+            let optionItems = optionList.querySelectorAll('.opt_item');
+            clickLabel(lb, optionItems);
+        })
+    });
+    const clickLabel = (lb, optionItems) => {
+        if(lb.parentNode.classList.contains('on')) {
+            lb.parentNode.classList.remove('on');
+            optionItems.forEach((opt) => {
+                opt.removeEventListener('click', () => {
+                    handleSelect(lb, opt)
+                })
+            })
+        } else {
+            lb.parentNode.classList.add('on');
+            optionItems.forEach((opt) => {
+                opt.addEventListener('click', () => {
+                    handleSelect(lb, opt)
+                })
+            })
+            return sel = true;
+        }
+    }
+    const handleSelect = (label, item) => {
+        label.firstChild.innerHTML = item.textContent;
+        label.parentNode.classList.remove('on');
+    }
+
 }
 
