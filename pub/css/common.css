@@ -64,6 +64,15 @@
     font-size: 20px;
     color: #333;
 }
+.tit_box.h_btn {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tit_box.h_btn .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /* 버튼 */
 .btn_box_group {
