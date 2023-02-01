@@ -69,6 +69,7 @@
                     <li><a href="./file/20230129_pub.zip" download>20230129_pub</a></li>
                     <li><a href="./file/20230131_pub.zip" download>20230131_pub</a></li>
                     <li><a href="./file/20230201_pub.zip" download>20230201_pub</a></li>
+                    <li><a href="./file/20230201_1_pub.zip" download>20230201_1_pub</a></li>
                 </ul>
             </div>
             <hr />
@@ -210,7 +211,7 @@
             
             // 전체 페이지 개수 구하기
             let total_n = $('#list tr').length - 2;
-            $('.total_n').text(total_n - 2);
+            $('.total_n').text(total_n);
 
             // 진행률 나타내기
             $('.per').text(Math.floor((curr_n/total_n)*100) + '%');
