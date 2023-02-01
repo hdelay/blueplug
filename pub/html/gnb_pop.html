@@ -133,6 +133,12 @@
             <div class="btn_box">
                 <button class="btn_blue pop_open" data-target="#pop_downcode">하위코드 보기</button>
             </div>
+            <div class="btn_box">
+                <button class="btn_blue pop_open" data-target="#pop_success">성공 팝업</button>
+            </div>
+            <div class="btn_box">
+                <button class="btn_blue pop_open" data-target="#pop_error">에러(경고) 팝업</button>
+            </div>
         </div>
 
     </div>
@@ -648,6 +654,67 @@
             <div class="btn_box_group center">
                 <div class="btn_box">
                     <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 성공 팝업 -->
+<div id="pop_success" class="pop_box_group">
+
+    <div class="common_pop_box">
+        <div class="pop_header">
+            <div class="img success"></div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+    
+            성공적으로 처리되었습니다.
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_black pop_close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 에러 팝업 -->
+<div id="pop_error" class="pop_box_group">
+
+    <div class="common_pop_box">
+        <div class="pop_header">
+            <div class="img error"></div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+    
+            경고메세지 입니다.<br/>
+            경고입니다.
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_black pop_close">닫기</a>
                 </div>
             </div>
         </div>

@@ -138,6 +138,12 @@
 }
 
 /* form 폼 */
+.form_box_group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
 .form_box {
     display: flex;
     align-items: center;
@@ -170,6 +176,18 @@
     font-size: 13px;
     font-weight: 300;
     color: #333;
+}
+.form_box_group .error {
+    border: 1px solid rgb(206, 58, 58);
+}
+.form_box_group .error_txt {
+    display: flex;
+    width: 100%;
+    padding-left: 17px;
+    background: url(../images/ico/ico_danger.svg) no-repeat left center;
+    background-size: auto 12px;
+    font-size: 13px;
+    color: rgb(206, 58, 58);
 }
 
 /* 셀렉트박스 */
