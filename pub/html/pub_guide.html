@@ -22,6 +22,9 @@
             z-index: 10;
             height: auto;
         }
+        nav > ul {
+            flex-direction: row;
+        }
         header h1 {
             width: 100%;
         }
@@ -47,6 +50,7 @@
             overflow-x: inherit;
             overflow-y: inherit;
             background-color: #000;
+            padding-top: 0;
         }
         header ul {
             display: flex;
@@ -213,10 +217,16 @@
                                     <a href="" class="btn_grayline">엑셀일괄 업로드</a>
                                 </div>
                                 <div class="btn_box">
-                                    <a href="" class="btn_grayline" download>엑셀일괄 다운로드</a>
+                                    <a href="" class="btn_grayline" download="">엑셀일괄 다운로드</a>
                                 </div>
                                 <div class="btn_box">
-                                    <a href="" class="btn_blue">신규등록</a>
+                                    <a href="" class="btn_grayline">행추가</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="" class="btn_b_grayline">행삭제</a>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="" class="btn_blue">저장</a>
                                 </div>
                             </div>
                         </div>
@@ -371,17 +381,13 @@
                 <div class="pop_search_box">
                     <div class="type_1">
                         <dl>
-                            <dt><label for="sel_01">대분류코드명</label></dt>
+                            <dt><label for="date_range">기간선택1</label></dt>
                             <dd>
                                 <div class="form_box">
-                                    <div class="sel_box">
-                                        <button class="label"><span>전체보기전체보기전체보기전체보기</span></button>
-                                        <ul class="opt_list">
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용내용내용내용내용내용내용내용</li>
-                                        </ul>
+                                    <div class="date_range">
+                                        <input type="text" id="date_range">
+                                        <span>~</span>
+                                        <input type="text"> 
                                     </div>
                                 </div>
                             </dd>
@@ -389,17 +395,13 @@
                     </div>
                     <div class="type_2">
                         <dl>
-                            <dt><label for="sel_02">대분류코드명</label></dt>
+                            <dt><label for="date_range2">대분류코드명</label></dt>
                             <dd>
                                 <div class="form_box">
-                                    <div class="sel_box">
-                                        <button class="label"><span>전체보기전체보기전체보기전체보기</span></button>
-                                        <ul class="opt_list">
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용내용내용내용내용내용내용내용</li>
-                                        </ul>
+                                    <div class="date_range">
+                                        <input type="text" id="date_range2">
+                                        <span>~</span>
+                                        <input type="text"> 
                                     </div>
                                 </div>
                             </dd>
@@ -449,34 +451,30 @@
                     </div>
                     <div class="type_4">
                         <dl>
-                            <dt><label for="sel_04">코드명</label></dt>
+                            <dt><label for="inp_day">데이트피커</label></dt>
+                            <dd>
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day" placeholder="YYYY-MM-DD">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="date_range3">기간선택3(추천X)</label></dt>
                             <dd>
                                 <div class="form_box">
-                                    <div class="sel_box">
-                                        <button class="label"><span>전체보기전체보기전체보기전체보기</span></button>
-                                        <ul class="opt_list">
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용</li>
-                                            <li class="opt_item">내용내용내용내용내용내용내용내용</li>
-                                        </ul>
+                                    <div class="date_range">
+                                        <input type="text" id="date_range3">
+                                        <span>~</span>
+                                        <input type="text"> 
                                     </div>
                                 </div>
                             </dd>
                         </dl>
                         <dl>
-                            <dt><label for="inp_05">코드값</label></dt>
+                            <dt><label for="inp_day2">데이트피커2</label></dt>
                             <dd>
-                                <div class="form_box">
-                                    <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt><label for="inp_06">코드명</label></dt>
-                            <dd>
-                                <div class="form_box">
-                                    <input type="text" id="inp_06" placeholder="검색어를 입력해 주세요.">
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day2" placeholder="YYYY-MM-DD">
                                 </div>
                             </dd>
                         </dl>
@@ -679,6 +677,7 @@
 </div>
 
 <!-- pub js -->
+<script src="../js/datepicker-full.js"></script>
 <script>
     // 팝업
     let target = document.querySelectorAll('.pop_open');
@@ -731,6 +730,23 @@
     const handleSelect = (label, item) => {
         label.firstChild.innerHTML = item.textContent;
         label.parentNode.classList.remove('on');
+    }
+    // 데이트피커
+    const elems = document.querySelectorAll('.date input');
+    console.log(elems);
+    for (let i = 0; i < elems.length; i++) {
+        const datepicker_day = new Datepicker(elems[i], {
+            autohide: true,
+            language: 'ko',
+        });
+    }
+    // 기간 데이트피커
+    const range_elems = document.querySelectorAll('.date_range');
+    for (let i = 0; i < range_elems.length; i++) {
+        const rangepicker = new DateRangePicker(range_elems[i], {
+            autohide: true,
+            language: 'ko',
+        }); 
     }
 </script>
 

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루플러그</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- header -->
+<header>
+        
+    <div class="side_top">
+        <h1 class="logo"><a href="">블루 플러그</a></h1>
+        <a href="" class="menu_slide_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <ul>
+        <li>
+            <span class="ico_time"></span>최종 접속일시
+            <div class="time_box">
+                <span>2023년 01월 31일</span>
+                <span>15:00:00</span>
+            </div>
+        </li>
+        <li>
+            <span class="ico_user"></span>
+            <strong>블루플러그</strong>님 환영합니다.
+        </li>
+        <li><button>로그아웃</button></li>
+    </ul>
+    
+</header>
+<!-- //header -->
+
+<!-- right container -->
+<div class="container">
+    
+    <!-- left menu -->
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="" class="acc_btn">
+                        <span class="ico_dashboard"></span>
+                        <strong>대시보드</strong>
+                    </a>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_system"></span>
+                        <strong>시스템 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">계정관리</a></li>
+                        <li><a href="">메뉴 접근 권한 관리</a></li>
+                        <li><a href="">코드 관리</a></li>
+                        <li><a href="">접속 로그 조회</a></li>
+                        <li><a href="">점검리포트 양식 관리</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_chargeadd"></span>
+                        <strong>모델 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">CPO 모델</a></li>
+                        <li><a href="">충전포스트 모델</a></li>
+                        <li><a href="">파워뱅크 모델</a></li>
+                        <li><a href="">부품 모델</a></li>
+                        <li><a href="">부품 그룹</a></li>
+                        <li><a href="">변수 모델</a></li>
+                        <li><a href="">알람 모델</a></li>
+                        <li><a href="">알람 그룹</a></li>
+                        <li><a href="">알람 시뮬레이션</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_object"></span>
+                        <strong>컴포넌트 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">충전소 등록/조회</a></li>
+                        <li><a href="">충전포스트 등록/조회</a></li>
+                        <li><a href="">파워뱅크 등록/조회</a></li>
+                        <li><a href="">충전포스트-파워뱅크 연결</a></li>
+                        <li><a href="">부품 등록/조회</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_control"></span>
+                        <strong>관제</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">현황 모니터링</a></li>
+                        <li><a href="">충전 프로파일 로그</a></li>
+                        <li><a href="">충전기 이벤트 로그</a></li>
+                        <li><a href="">서버 이벤트 로그</a></li>
+                        <li><a href="">원격 제어</a></li>
+                        <li><a href="">부품 현황 조회/교체</a></li>
+                        <li><a href="">부품 교환 이력</a></li>
+                        <li><a href="">클레임 조치 등록/조회</a></li>
+                        <li><a href="">고장 모니터링</a></li>
+                        <li><a href="">클레임 조치 모니터링</a></li>
+                        <li><a href="">부품 교환 모니터링</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_stationcheck"></span>
+                        <strong>점검</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">점검리포트 작성/조회</a></li>
+                        <li><a href="">EOL 점검</a></li>
+                        <li><a href="">EOL 점검 이력</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <footer>
+            <p>COPYRIGHT © HYUNDAI KEFICO COMPANY. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </aside>
+    <!-- //left menu -->
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- 제목 -->
+        <div class="tit_box h_btn">
+            <div class="left">
+                <h2>점검리포트 양식 관리</h2>
+            </div>
+            <div class="right">
+                <div class="btn_box_group">
+                    <div class="btn_box">
+                        <button class="btn_gray">초기화</button>
+                    </div>
+                    <div class="btn_box">
+                        <button class="btn_black">검색</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 검색박스 -->
+        <div class="search_box">
+            <div class="type_4">
+                <dl>
+                    <dt><label for="sel_04">양식분류</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <div class="sel_box">
+                                <button class="label"><span>일간/월간/년간/상시</span></button>
+                                <ul class="opt_list">
+                                    <li class="opt_item">일간</li>
+                                    <li class="opt_item">월간</li>
+                                    <li class="opt_item">년간</li>
+                                    <li class="opt_item">상시</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_05">양식명</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <input type="text" id="inp_05" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="inp_06">사용여부</label></dt>
+                    <dd>
+                        <div class="form_box">
+                            <div class="sel_box">
+                                <button class="label"><span>사용/미사용</span></button>
+                                <ul class="opt_list">
+                                    <li class="opt_item">사용</li>
+                                    <li class="opt_item">미사용</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 게시판 -->
+        <div class="tbl_group">
+            <div class="btn_box_group between">
+                <div class="total">
+                    TOTAL <strong>100</strong>건
+                </div>
+                <div class="right">
+                    <div class="btn_box">
+                        <a href="javascript:void(0);" class="btn_grayline pop_open" data-target="#pop_checklist">(임시)점검리스트 항목 관리</a>
+                    </div>
+                    <div class="btn_box">
+                        <a href="javascript:void(0);" class="btn_grayline pop_open" data-target="#pop_postcheck">(임시)일간 포스트 점검</a>
+                    </div>
+                    <div class="btn_box">
+                        <a href="" class="btn_b_grayline">삭제</a>
+                    </div>
+                    <div class="btn_box">
+                        <a href="" class="btn_blue">신규생성</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tbl_box">
+                <table>
+                    <caption>검색 결과 테이블</caption>
+                    <colgroup>
+                        <col width="5%"/>
+                        <col width="5%"/>
+                        <col width="10%"/>
+                        <col width="15%"/>
+                        <col width="20%"/>
+                        <col width="7%"/>
+                        <col width="15%"/>
+                        <col width="8%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_01">
+                                        <label for="chk_01">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </th>
+                            <th>NO</th>
+                            <th>분류</th>
+                            <th>양식명</th>
+                            <th>설명</th>
+                            <th>사용여부</th>
+                            <th>생성일시</th>
+                            <th>미리보기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_02">
+                                        <label for="chk_02">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_03">
+                                        <label for="chk_03">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_04">
+                                        <label for="chk_04">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_04">
+                                        <label for="chk_04">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_05">
+                                        <label for="chk_05">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_06">
+                                        <label for="chk_06">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_07">
+                                        <label for="chk_07">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_08">
+                                        <label for="chk_08">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_09">
+                                        <label for="chk_09">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="chk_box solo">
+                                    <span>
+                                        <input type="checkbox" id="chk_10">
+                                        <label for="chk_10">&nbsp;</label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>분류</td>
+                            <td class="agn_l">양식명</td>
+                            <td class="agn_l">설명</td>
+                            <td>사용여부</td>
+                            <td>생성일시</td>
+                            <td><a href="javascript:void(0)" class="tbl_btn">미리보기</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="paging_box">
+                <ul>
+                    <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                    <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                    <li class="on"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">10</a></li>
+                    <li><a href="">100</a></li>
+                    <li><a href="">1000</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                    <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                    <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- //right container -->
+
+</div>
+
+<!-- 점검리스트 항목 관리 팝업 -->
+<div id="pop_checklist" class="pop_box_group">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>점검리스트 항목 관리</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="inp_01">체크리스트 구분</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>일간/월간/년간</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">일간</li>
+                                        <li class="opt_item">월간</li>
+                                        <li class="opt_item">년간</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">점검리스트 명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" value="간포스트점검 2023">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                
+            </div>
+
+            <!-- 게시판 -->
+            <div class="tbl_group">
+                
+                <div class="btn_box_group between">
+                    <div class="total"></div>
+                    <div class="right">
+                        <div class="btn_box">
+                            <a href="" class="btn_b_grayline">행삭제</a>
+                        </div>
+                        <div class="btn_box">
+                            <a href="" class="btn_grayline">행추가</a>
+                        </div>
+                        <div class="btn_box">
+                            <a href="" class="btn_blue">저장</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%"/>
+                            <col width="10%"/>
+                            <col width="30%"/>
+                            <col width="15%"/>
+                            <col width="10%"/>
+                            <col width="20%"/>
+                            <col width="10%"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>카테고리</th>
+                                <th>항목명</th>
+                                <th>속성</th>
+                                <th>단위</th>
+                                <th>placeholder</th>
+                                <th>컬럼갯수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>환경성</td>
+                                <td class="agn_l">주변은 깨끗히 청소되어 있는가</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>환경성</td>
+                                <td class="agn_l">케이블은 가지런한가</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>상태</td>
+                                <td class="agn_l">화면에 터치스크린은 잘 작동하나</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>상태</td>
+                                <td class="agn_l">※소수점 없이 입력바랍니다.</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>안정성</td>
+                                <td class="agn_l">케이블은 가지런한가</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>종합의견</td>
+                                <td class="agn_l">종합의견을 기술해주세요</td>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>radio</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">text</li>
+                                                <li class="opt_item">display</li>
+                                                <li class="opt_item">opinion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>YES, NO</td>
+                                <td class="agn_l">반드시 입력하세요.</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 일간 포스트 점검 팝업 -->
+<div id="pop_postcheck" class="pop_box_group">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>일간 포스트 점검</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+    
+            <div class="chklist_box">
+                <dl>
+                    <dt>환경성</dt>
+                    <dd class="type_2">
+                        <div class="chklist_item">
+                            <div class="tit">주변은 깨끗히 청소되어 있는가?</div>
+                            <div class="rdo_box">
+                                <span>
+                                    <input type="radio" id="radio_01" name="rdo_group_01" checked="">
+                                    <label for="radio_01">YES</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_02" name="rdo_group_01">
+                                    <label for="radio_02">NO</label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chklist_item">
+                            <div class="tit">케이블은 가지런한가?</div>
+                            <div class="rdo_box">
+                                <span>
+                                    <input type="radio" id="radio_01" name="rdo_group_01" checked="">
+                                    <label for="radio_01">YES</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_02" name="rdo_group_01">
+                                    <label for="radio_02">NO</label>
+                                </span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>상태</dt>
+                    <dd class="type_1">
+                        <div class="chklist_item">
+                            <div class="tit">
+                                화면에 터치스크린은 잘 작동하나?
+                                <div class="txt_danger">※ 소수점없이 입력바랍니다.</div>
+                            </div>
+                            <div class="form_box">
+                                <input type="text" id="inp_06" placeholder="반드시 입력하세요."><span class="txt">km</span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>안정성</dt>
+                    <dd class="type_2">
+                        <div class="chklist_item">
+                            <div class="tit">케이블은 가지런한가?</div>
+                            <div class="rdo_box">
+                                <span>
+                                    <input type="radio" id="radio_01" name="rdo_group_01" checked="">
+                                    <label for="radio_01">YES</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_02" name="rdo_group_01">
+                                    <label for="radio_02">NO</label>
+                                </span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>종합의견</dt>
+                    <dd class="type_3">
+                        <div class="chklist_item">
+                            <div class="tit">종합의견을 기술해주세요.</div>
+                            <div class="form_box">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- pub js -->
+<script src="../js/datepicker-full.js" defer></script>
+<script src="../js/common.js" defer></script>
+
+</body>
+</html>

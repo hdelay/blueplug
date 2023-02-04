@@ -2,10 +2,12 @@ window.onload = function(){
     
     // 메뉴 슬라이드 버튼
     const menu_slide_btn = document.querySelector('.menu_slide_btn');
-    menu_slide_btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        this.parentNode.parentNode.parentNode.classList.toggle('on');
-    });
+    if(menu_slide_btn){
+        menu_slide_btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.parentNode.parentNode.parentNode.classList.toggle('on');
+        });
+    }
 
     // nav
     const buttons = document.querySelectorAll('.acc_btn');
@@ -71,6 +73,38 @@ window.onload = function(){
     const handleSelect = (label, item) => {
         label.firstChild.innerHTML = item.textContent;
         label.parentNode.classList.remove('on');
+    }
+    
+    // 데이트피커
+    const elems = document.querySelectorAll('.date input');
+    for (let i = 0; i < elems.length; i++) {
+        const datepicker_day = new Datepicker(elems[i], {
+            autohide: true,
+            language: 'ko',
+        });
+    }
+    // 기간 데이트피커
+    const range_elems = document.querySelectorAll('.date_range');
+    for (let i = 0; i < range_elems.length; i++) {
+        const rangepicker = new DateRangePicker(range_elems[i], {
+            autohide: true,
+            language: 'ko',
+        }); 
+    }
+
+    // 로그인 패스워드 보기
+    const login_pw_eyebtn = document.querySelector('.ico_eye');
+    if(login_pw_eyebtn){
+        login_pw_eyebtn.addEventListener('click', function() {
+            const previnp = this.previousSibling.previousSibling;
+            if(previnp.getAttribute('type') === 'password'){
+                previnp.setAttribute('type', 'text');
+                this.classList.add('on')
+            } else {
+                previnp.setAttribute('type', 'password');
+                this.classList.remove('on')
+            }
+        });
     }
 
 }
