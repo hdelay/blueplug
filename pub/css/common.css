@@ -212,7 +212,7 @@
     border: none;
     padding: 0;
     box-sizing: border-box;
-    background-color: none;
+    background-color: transparent;
     margin-left: 5px;
 }
 .form_box textarea {
