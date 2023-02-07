@@ -677,7 +677,6 @@
 </div>
 
 <!-- pub js -->
-<script src="../js/datepicker-full.js"></script>
 <script>
     // 팝업
     let target = document.querySelectorAll('.pop_open');
@@ -730,23 +729,6 @@
     const handleSelect = (label, item) => {
         label.firstChild.innerHTML = item.textContent;
         label.parentNode.classList.remove('on');
-    }
-    // 데이트피커
-    const elems = document.querySelectorAll('.date input');
-    console.log(elems);
-    for (let i = 0; i < elems.length; i++) {
-        const datepicker_day = new Datepicker(elems[i], {
-            autohide: true,
-            language: 'ko',
-        });
-    }
-    // 기간 데이트피커
-    const range_elems = document.querySelectorAll('.date_range');
-    for (let i = 0; i < range_elems.length; i++) {
-        const rangepicker = new DateRangePicker(range_elems[i], {
-            autohide: true,
-            language: 'ko',
-        }); 
     }
 </script>
 

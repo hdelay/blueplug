@@ -238,17 +238,19 @@
 }
 .date_range {
     width: 100%;
-    min-width: 260px;
+    /* min-width: 260px; */
     max-width: 350px;
     height: 40px;
     padding: 0;
 }
-.datepicker-input {
+.date_range input,
+.date input {
     padding-right: 36px;
+    box-sizing: border-box;
     background: #fff url(../images/ico/ico_datepicker.svg) no-repeat calc(100% - 10px) center;
     background-size: 19px auto;
 }
-.date_range .datepicker-input {
+.date_range input {
     display: block;
     width: calc(50% - 9px);
     height: 100%;

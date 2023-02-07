@@ -74,23 +74,6 @@ window.onload = function(){
         label.firstChild.innerHTML = item.textContent;
         label.parentNode.classList.remove('on');
     }
-    
-    // 데이트피커
-    const elems = document.querySelectorAll('.date input');
-    for (let i = 0; i < elems.length; i++) {
-        const datepicker_day = new Datepicker(elems[i], {
-            autohide: true,
-            language: 'ko',
-        });
-    }
-    // 기간 데이트피커
-    const range_elems = document.querySelectorAll('.date_range');
-    for (let i = 0; i < range_elems.length; i++) {
-        const rangepicker = new DateRangePicker(range_elems[i], {
-            autohide: true,
-            language: 'ko',
-        }); 
-    }
 
     // 로그인 패스워드 보기
     const login_pw_eyebtn = document.querySelector('.ico_eye');
