@@ -106,6 +106,21 @@ window.onload = function(){
             }
         });
     }
-
 }
 
+// 로딩 open
+function loading_open(){
+    const loading_g = document.querySelector('body').insertAdjacentHTML('afterend',
+        `<div class="loading_box">
+            <div class="loading"></div>
+            <div class="loading-text">loading</div>
+        </div>`
+    );
+}
+// 로딩 close
+function loading_close(){
+    const close_true = document.querySelector('.loading_box');
+    if(close_true){
+        close_true.remove();
+    }
+}

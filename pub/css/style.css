@@ -7,6 +7,27 @@
     파일정의 : style.css
 ============================================================ */
 
+/* layout */
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+.pop_content .layout {
+    gap: 10px;
+}
+.l30 {width: calc(30% - 25px);}
+.l40 {width: calc(40% - 25px);}
+.l50 {width: calc(50% - 25px);}
+.l60 {width: calc(60% - 25px);}
+.l70 {width: calc(70% - 25px);}
+.pop_content .l30 {width: calc(30% - 5px);}
+.pop_content .l40 {width: calc(40% - 5px);}
+.pop_content .l50 {width: calc(50% - 5px);}
+.pop_content .l60 {width: calc(60% - 5px);}
+.pop_content .l70 {width: calc(70% - 5px);}
+
 /* header */
 header {
     display: flex;
@@ -379,7 +400,8 @@ footer p::before {
     padding: 20px;
     border-radius: 10px;
     min-width: 900px;
-    max-width: 900px;
+    margin: 0 20px;
+    /* max-width: 900px; */
     box-shadow: 0px 0px 9px 4px rgb(0 0 0 / 17%);
 }
 .pop_box_group .pop_box .pop_header .close {
@@ -399,6 +421,11 @@ footer p::before {
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+}
+.pop_box_group .pop_box .pop_content {
+    overflow-y: auto;
+    min-height: 180px;
+    max-height: calc(100vh - 160px);
 }
 .pop_box_group .common_pop_box {
     position: relative;
@@ -461,6 +488,12 @@ footer p::before {
 .pop_box .tbl_box table thead th {
     border-top: 0;
     padding: 10px;
+}
+.pop_box .btnadd .tbl_box table thead th {
+    border-top: 1px solid #ddd;
+}
+.pop_box .btnadd .tbl_box table tbody tr:last-child td {
+    border-bottom: 1px solid #ddd;
 }
 .pop_footer {
     margin-top: 20px;
