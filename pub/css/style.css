@@ -638,11 +638,6 @@ footer p::before {
     box-shadow: 0px 0px 10px 1px rgba(0 44 95);
     outline: none;
 }
-.login_inp .inp_txt {
-    position: absolute;
-    top: 120px;
-    left: 10px;
-}
 .login_inp .inp_txt span {
     display: block;
     font-size: 12px;
@@ -663,6 +658,63 @@ footer p::before {
 .login_inp .inp_pw .ico_eye.on {
     background: #002C5F url(../images/ico/ico_pweye_on.svg) no-repeat center;
 }
+.inp_certification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.inp_certification .result_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: calc(100% - 76px);
+}
+.inp_certification .result_box label {
+    position: absolute;
+    left: -9999px;
+}
+.inp_certification .result_box input {
+    padding: 15px 50px 15px 10px;
+}
+.inp_certification .result_box .time {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 13px;
+    transform: translateY(-50%);
+    color: #CE0000;
+}
+.inp_certification > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ddd;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s;
+}
+.id_pw_open .inp_id,
+.id_pw_open .inp_pw,
+.id_pw_open .inp_txt {
+    display: block;
+}
+.id_pw_open .inp_certification {
+    display: none;
+}
+.id_pw_close .inp_id,
+.id_pw_close .inp_pw,
+.id_pw_close .inp_txt {
+    display: none;
+}
+.id_pw_close .inp_certification {
+    display: flex;
+}
+
 .login_btn {
     display: flex;
     flex-direction: column;

@@ -52,7 +52,12 @@
                 <span class="txt">CS Adminstration System</span>
             </div>
     
-            <div class="login_inp">
+            <!-- 
+            login_inp에 추가되는 class
+            .id_pw_open 붙일시 id/pw/inp_txt 노출
+            .id_pw_close 붙일시 inp_certification(인증번호) 노출
+             -->
+            <div class="login_inp id_pw_open">
                 <div class="inp_id">
                     <label for="inp_id">아이디 입력</label>
                     <input type="text" id="inp_id" value="blueplug@hyundai-kefico.com">
@@ -64,6 +69,14 @@
                 </div>
                 <div class="inp_txt">
                     <span>CapsLock이 켜져 있습니다.</span>
+                </div>
+                <div class="inp_certification">
+                    <div class="result_box">
+                        <label for="inp_certification">인증번호 입력</label>
+                        <input type="text" id="inp_certification" placeholder="인증번호를 입력하세요.">
+                        <div class="time">02:27</div>
+                    </div>
+                    <button>인증번호<br/>다시받기</button>
                 </div>
             </div>
     
