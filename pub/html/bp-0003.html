@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루플러그</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon/favicon16.png" sizes="16x16"> 
+    <link rel="icon" href="../images/favicon/favicon32.png" sizes="32x32"> 
+    <link rel="icon" href="../images/favicon/favicon48.png" sizes="48x48"> 
+    <link rel="icon" href="../images/favicon/favicon64.png" sizes="64x64"> 
+    <link rel="icon" href="../images/favicon/favicon128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="../images/favicon/favicon144.png">
+    <link rel="shortcut icon" href="../images/favicon/favicon144.png">
+    <link rel="icon" href="../images/favicon.ico">
+
+</head>
+<body>
+<div class="wrap">
+
+<div class="login_box_group">
+    <div class="login_header">
+        <h1 class="logo">현대 케피코</h1>
+    </div>
+    
+    <!-- login box -->
+    <div class="login_box">
+    
+        <div class="lang_box">
+            <div class="form_box">
+                <div class="sel_box">
+                    <button class="label"><span>KOR</span></button>
+                    <ul class="opt_list">
+                        <li class="opt_item">EN</li>
+                        <li class="opt_item">KOR</li>
+                        <li class="opt_item">EN</li>
+                        <li class="opt_item">KOR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content">
+    
+            <div class="logo">
+                <span class="img"></span>
+                <span class="txt">CS Adminstration System</span>
+            </div>
+    
+            <!-- 
+            login_inp에 추가되는 class
+            .id_pw_open 붙일시 id/pw/inp_txt 노출
+            .id_pw_close 붙일시 inp_certification(인증번호) 노출
+             -->
+            <div class="login_inp id_pw_open">
+                <div class="inp_id">
+                    <label for="inp_id">아이디 입력</label>
+                    <input type="text" id="inp_id" value="blueplug@hyundai-kefico.com">
+                </div>
+                <div class="inp_pw">
+                    <label for="inp_pw">비밀번호 입력</label>
+                    <input type="password" id="inp_pw" value="qlalfqjsgh486">
+                    <button class="ico_eye"></button>
+                </div>
+                <div class="inp_txt">
+                    <span>CapsLock이 켜져 있습니다.</span>
+                </div>
+                <div class="inp_certification">
+                    <div class="result_box">
+                        <label for="inp_certification">인증번호 입력</label>
+                        <input type="text" id="inp_certification" placeholder="인증번호를 입력하세요.">
+                        <div class="time">02:27</div>
+                    </div>
+                    <button>인증번호<br/>다시받기</button>
+                </div>
+            </div>
+    
+            <div class="login_btn">
+                <div class="chk_box">
+                    <span>
+                        <input type="checkbox" id="chk_01">
+                        <label for="chk_01">아이디 저장하기</label>
+                    </span>
+                </div>
+                <a href="#">로그인</a>
+                <div class="etc_btn">
+                    <a href="./bp-0002.html">비밀번호 찾기</a>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    <!-- //login box -->
+    
+    <div class="login_footer">
+        COPYRIGHT © HYUNDAI KEFICO COMPANY. ALL RIGHTS RESERVED.
+    </div>
+</div>
+
+</div>
+
+<!-- 비밀번호 변경 팝업 -->
+<div id="pop_newpw" class="pop_box_group on small">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>비밀번호 변경</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+                
+            <p class="etc_txt">최초 로그인 시에는 비밀번호 변경이 필요합니다.</p>
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">현재비밀번호</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="password" id="inp_01" placeholder="현재 비밀번호를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_02">새 비밀번호</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="password" id="inp_01" placeholder="현재 비밀번호를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_03">비밀번호 확인</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="password" id="inp_01" placeholder="현재 비밀번호를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_gray pop_close">취소</a>
+                </div>
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">변경</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- pub js -->
+<script src="../js/common.js" defer></script>
+
+</body>
+</html>

@@ -185,6 +185,7 @@
                             <li>
                                 <div class="txt_danger">* 파일 다운로드 권한은 읽기 권한을 부여하여야 사용 가능합니다.</div>
                             </li>
+                            <li><div class="etc_txt">최초 로그인 시에는 비밀번호 변경이 필요합니다.</div></li>
                         </ul>
                     </dd>
                 </dl>
@@ -417,10 +418,25 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt><label for="inp_01">대분류코드명</label></dt>
+                            <dt><label for="inp_01">전화번호</label></dt>
                             <dd>
-                                <div class="form_box">
-                                    <input type="text" id="inp_01">
+                                <div class="form_box_group tel">
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label" id="inp_07"><span>010</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">031</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span>-</span>
+                                    <div class="form_box">
+                                        <input type="text" id="">
+                                    </div>
+                                    <span>-</span>
+                                    <div class="form_box">
+                                        <input type="text" id="">
+                                    </div>
                                 </div>
                             </dd>
                         </dl>
@@ -636,25 +652,106 @@
         <dl id="content_04" class="item-box">
             <dt>테이블</dt>
             <dd>
-                <div class="rdo_box">
-                    <span>
-                        <input type="radio" id="radio_01" name="rdo_group_01" checked>
-                        <label for="radio_01">선택함</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="radio_02" name="rdo_group_01">
-                        <label for="radio_02">선택안함</label>
-                    </span>
-                </div>
-                <div class="rdo_box">
-                    <span>
-                        <input type="radio" id="radio_03" name="rdo_group_01" class="checked" disabled>
-                        <label for="radio_03">선택함(class추가 disabled)</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="radio_04" name="rdo_group_01" disabled>
-                        <label for="radio_04">선택안함(disabled)</label>
-                    </span>
+                <!-- 내용 -->
+                <div class="detail_box">
+                    <!-- 테이블 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box">
+                            <table>
+                                <caption>회원가입 테이블</caption>
+                                <colgroup>
+                                    <col width="15%"/>
+                                    <col width="35%"/>
+                                    <col width="15%"/>
+                                    <col width="35%"/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="">아이디</label></th>
+                                        <td colspan="3">LUCKEEY@FASAFA.COM</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_01">비밀번호</label></th>
+                                        <td>
+                                            <div class="form_box">
+                                                <input type="password" id="inp_01">
+                                            </div>
+                                        </td>
+                                        <th scope="row"><label for="inp_02">비밀번호 확인</label></th>
+                                        <td>
+                                            <div class="form_box">
+                                                <input type="password" id="inp_02">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_03">이름</label></th>
+                                        <td colspan="3">
+                                            <div class="form_box">
+                                                <input type="text" id="inp_03">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_04">소속</label></th>
+                                        <td colspan="3">케피코 CS</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_05">부서</label></th>
+                                        <td colspan="3">
+                                            <div class="form_box">
+                                                <input type="text" id="inp_05">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_06">직책</label></th>
+                                        <td colspan="3">
+                                            <div class="form_box">
+                                                <input type="text" id="inp_06">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="inp_07">전화번호</label></th>
+                                        <td colspan="3">
+                                            <div class="form_box_group tel">
+                                                <div class="form_box">
+                                                    <div class="sel_box">
+                                                        <button class="label" id="inp_07"><span>010</span></button>
+                                                        <ul class="opt_list">
+                                                            <li class="opt_item">031</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <span>-</span>
+                                                <div class="form_box">
+                                                    <input type="text" id="">
+                                                </div>
+                                                <span>-</span>
+                                                <div class="form_box">
+                                                    <input type="text" id="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="">권한</label></th>
+                                        <td colspan="3">CS 관리자</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                    <div class="btn_box_group right">
+                        <div class="btn_box">
+                            <a href="" class="btn_blue">수정</a>
+                        </div>
+                    </div>
+
                 </div>
             </dd>
         </dl>

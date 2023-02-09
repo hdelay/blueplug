@@ -394,6 +394,9 @@ footer p::before {
     background-color: rgba(0, 0, 0, .6);
     z-index: 10;
 }
+.pop_box_group.on {
+    display: flex;
+}
 .pop_box_group .pop_box {
     position: relative;
     background-color: #fff;
@@ -403,6 +406,9 @@ footer p::before {
     margin: 0 20px;
     max-width: 1000px;
     box-shadow: 0px 0px 9px 4px rgb(0 0 0 / 17%);
+}
+.pop_box_group.small .pop_box {
+    min-width: 500px;
 }
 .pop_box_group .pop_box .pop_header .close {
     display: flex;
@@ -763,4 +769,29 @@ footer p::before {
     font-size: 12px;
     font-weight: 300;
     color: #555;
+}
+
+/* 비밀번호 찾기 */
+.login_box.sub {
+    height: 400px;
+}
+.login_sub_header {
+    margin-bottom: 40px;
+}
+.login_sub_header h2 {
+    font-weight: 500;
+}
+.login_sub_inp {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+}
+.login_sub_inp .btn_box > * {
+    width: 100%;
+}
+.login_sub_inp .txt {
+    word-break: keep-all;
+    font-size: 13px;
 }
