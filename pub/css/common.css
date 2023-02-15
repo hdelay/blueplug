@@ -39,6 +39,13 @@
     font-weight: 300;
     color: #D72B20;
 }
+.etc_txt {
+    margin-top: 20px;
+    font-size: 13px;
+}
+.etc_txt + .pop_search_box {
+    margin-top: 10px;
+}
 
 /* 제목 */
 .tit_box {
@@ -83,6 +90,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
+}
+.detail_box .btn_box_group {
+    margin-top: 30px;
 }
 .btn_box_group.right {
     justify-content: flex-end;
@@ -168,6 +178,7 @@
 .form_box {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .form_box > * {
     display: flex;
@@ -217,6 +228,7 @@
     box-sizing: border-box;
     background-color: transparent;
     margin-left: 5px;
+    margin-top: 5px;
 }
 .form_box textarea {
     resize: none;
@@ -270,6 +282,15 @@
     padding: 0;
     box-sizing: border-box;
     margin-left: 5px;
+}
+.form_box_group.tel .form_box {
+    width: calc(33.33% - 17px);
+}
+.form_box_group.tel2 .form_box:nth-child(1) {
+    width: 100px;
+}
+.form_box_group.tel2 .form_box:nth-child(2) {
+    width: calc(100% - 110px);
 }
 
 .req {
@@ -684,7 +705,7 @@
 .tbl_box table {
     width: 100%;
 }
-.tbl_box table thead th {
+.tbl_box table th {
     padding: 15px 0;
     background-color: #f0f0f0;
     border-right: 1px solid #ddd;
@@ -695,7 +716,7 @@
     font-weight: 300;
     color: #949494;
 }
-.tbl_box table thead th:last-child {
+.tbl_box table th:last-child {
     border-right: none;
 }
 .tbl_box table tbody td {
@@ -720,6 +741,22 @@
 .tbl_box table tbody td a:hover {
     color: #000;
     text-decoration: underline;
+}
+
+.detail_box {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.detail_box .tbl_box {
+    border-top: 1px solid #333;
+}
+.detail_box .tbl_box tr:first-child th {
+    border-top: 0;
+}
+.detail_box .tbl_box td {
+    padding: 5px 10px;
+    text-align: left;
 }
 
 /* chklist */
