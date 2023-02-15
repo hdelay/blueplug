@@ -150,6 +150,7 @@ aside {
     width: 30px;
     height: 30px;
     background: url(../images/ico/ico_menu_off.svg) no-repeat center;
+    background-size: auto 13px;
 }
 
 .wrap.on .side_top .menu_slide_btn {
@@ -157,6 +158,7 @@ aside {
     width: 30px;
     height: 30px;
     background-image: url(../images/ico/ico_menu_on.svg);
+    background-size: auto 13px;
 }
 
 /* 메뉴 슬라이드 시 */
