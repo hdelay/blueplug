@@ -624,6 +624,22 @@
     color: #949494;
 }
 
+.layout .search_box {
+    padding: 0;
+    margin: 0;
+}
+.layout .search_box > div dl {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.layout .search_box > div dl {
+    width: auto;
+    min-width: 160px;
+}
+.layout .search_box > div dl dd {
+    width: 100%;
+}
+
 /* total */
 .tbl_group .btn_box_group {
     padding: 13px 25px;

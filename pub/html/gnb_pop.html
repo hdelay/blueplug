@@ -198,6 +198,9 @@
             <div class="btn_box">
                 <button class="btn_blue pop_open" data-target="#pop_partallupload">부품일괄업로드 팝업</button>
             </div>
+            <div class="btn_box">
+                <button class="btn_blue pop_open" data-target="#pop_new_part">부품 추가 팝업</button>
+            </div>
         </div>
 
         <!-- 제목 -->
@@ -1866,6 +1869,347 @@
             </div>
         </div>
 
+    </div>
+
+</div>
+
+<!-- 부품추가 팝업 -->
+<div id="pop_new_part" class="pop_box_group big">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>부품추가</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+
+            <!-- 검색버튼 -->
+            <div class="tit_box h_btn">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_gray">초기화</button>
+                        </div>
+                        <div class="btn_box">
+                            <button class="btn_black">검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+
+                <div class="type_4">
+                    <dl>
+                        <dt><label for="inp_01">사용구분</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>전체</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">전체</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">부품타입</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>전체</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">전체</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">케피코품번</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">파트No.</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="type_4">
+                    <dl>
+                        <dt><label for="inp_01">종류구분</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">부품명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">제조사</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_02">등록자</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>전체</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">전체</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                
+            </div>
+
+            <!-- 게시판 -->
+            <div class="tbl_group">
+                
+                <div class="btn_box_group between">
+                    <div class="total"></div>
+                    <div class="right">
+                        <div class="btn_box">
+                            <a href="" class="btn_blue">선택추가</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%"/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                            <col width=""/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th>No</th>
+                                <th>부품사용구분</th>
+                                <th>부품타입</th>
+                                <th>케피코품번</th>
+                                <th>파트No.(업체품번)</th>
+                                <th>부품종류구분</th>
+                                <th>부품명</th>
+                                <th>제조사</th>
+                                <th>예측수명</th>
+                                <th>등록자</th>
+                                <th>등록일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="chk_box solo">
+                                        <span>
+                                            <input type="checkbox" id="chk_01">
+                                            <label for="chk_01">&nbsp;</label>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>1</td>
+                                <td class="agn_l">충전포스트</td>
+                                <td>개발품</td>
+                                <td class="agn_l">KF_CH_2301_PA01</td>
+                                <td class="agn_l">2301265509_KF_1210</td>
+                                <td class="agn_l">제어기</td>
+                                <td class="agn_l">메인제어ASSY</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">15개월</td>
+                                <td class="agn_l">홍길동</td>
+                                <td>2023-01-15 15:00:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">확인</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
