@@ -639,6 +639,19 @@
 .layout .search_box > div dl dd {
     width: 100%;
 }
+.layout .search_box > div dl dd .sel_box > button,
+.layout .search_box > div dl dd .form_box > * {
+    padding: 5px 10px;
+}
+.layout .search_box > div dl dd .sel_box {
+    padding: 0;
+}
+.layout .search_box > div dl dd .sel_box .opt_list {
+    top: 30px;
+}
+.tbl_group .btn_box_group.search_add {
+    align-items: flex-end;
+}
 
 /* total */
 .tbl_group .btn_box_group {
