@@ -89,6 +89,22 @@ window.onload = function(){
             }
         });
     }
+    
+    // 파일업로드
+    const file_inp_g = document.querySelectorAll('.file_inp');
+    for(i = 0; i < file_inp_g.length; i++){
+        // const file_inp = document.querySelector('.file_inp');
+        const file_inp = file_inp_g[i];
+        file_inp.addEventListener('change', function(){
+            let fileList;
+            for(i = 0; i < file_inp.files.length; i++){
+                fileList = file_inp.files[i].name;
+            }
+            const file_txt = file_inp.nextSibling.nextSibling;
+            file_txt.value = fileList;
+        });
+    }
+    
 }
 
 // 로딩 open

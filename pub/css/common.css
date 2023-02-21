@@ -292,6 +292,46 @@
 .form_box_group.tel2 .form_box:nth-child(2) {
     width: calc(100% - 110px);
 }
+.form_box_group.file_group {
+    position: relative;
+}
+.form_box.file_box {
+    position: relative;
+    width: 100%;
+}
+.form_box.file_box input[type="file"] {
+    position: absolute;
+    left: -9999px;
+}
+.form_box.file_box input[type="text"] {
+    padding-right: 128px !important;
+}
+.form_box.file_box label {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: auto;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #949494;
+    transition: .2s;
+}
+.form_box.file_box label:hover {
+    border-color: #333;
+    z-index: 1;
+}
+.form_box_group.file_group .btn_box {
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    transform: translateY(-50%);
+}
+.form_box_group.file_group .btn_box > * {
+    padding: 5px 10px;
+    min-width: 0;
+    border-radius: 5px 0 0 5px;
+}
 
 .req {
     padding-left: 2px;
@@ -338,7 +378,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 45px;
+    top: 40px;
     left: 0;
     width: 100%;
     padding: 5px;
@@ -627,6 +667,7 @@
 .layout .search_box {
     padding: 0;
     margin: 0;
+    gap: 3px;
 }
 .layout .search_box > div dl {
     flex-direction: column;
@@ -650,7 +691,20 @@
     top: 30px;
 }
 .tbl_group .btn_box_group.search_add {
-    align-items: flex-end;
+    align-items: inherit;
+}
+.tbl_group .btn_box_group.search_add .right .btn_box {
+    height: 100%;
+}
+.tbl_group .btn_box_group.search_add .right .btn_box > * {
+    height: 100%;
+}
+.layout .search_box > div.type_1 dl {
+    width: 100%;
+}
+.layout .search_box > div dl dt {
+    line-height: 13px;
+    margin-bottom: 2px;
 }
 
 /* total */
