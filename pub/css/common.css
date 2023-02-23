@@ -216,7 +216,7 @@
     padding-right: 30px;
 }
 .form_box > *:disabled {
-    background-color: #f5f5f5;
+    background-color: #ddd;
     font-size: 13px;
     font-weight: 300;
     color: #333;

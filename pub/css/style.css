@@ -458,12 +458,11 @@ footer p::before {
     min-width: 500px;
 }
 .pop_box_group.big .pop_box {
-    min-width: 1050px;
+    min-width: 1350px;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1500px) {
     .pop_box_group.big .pop_box {
-        min-width: 0;
-        width: 100%;
+        min-width: calc(100% - 80px);
     }
 }
 .pop_box_group .pop_box .pop_header .close {

@@ -23,6 +23,7 @@ window.onload = function(){
     });
 
     // 팝업
+    const body = document.querySelector('body');
     let target = document.querySelectorAll('.pop_open');
     let btnPopClose = document.querySelectorAll('.pop_close');
     let targetID;
@@ -32,6 +33,7 @@ window.onload = function(){
         target[i].addEventListener('click', function(){
             targetID = this.getAttribute('data-target');
             document.querySelector(targetID).style.display = 'flex';
+            body.style.overflow = 'hidden';
         });
     }
     
@@ -39,6 +41,7 @@ window.onload = function(){
     for(let j = 0; j < btnPopClose.length; j++){
         btnPopClose[j].addEventListener('click', function(){
             this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';
+            body.style.overflow = '';
         });
     }
 
