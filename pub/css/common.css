@@ -47,6 +47,13 @@
 .etc_txt + .pop_search_box {
     margin-top: 10px;
 }
+.tbl_txt {
+    font-size: 11px;
+    margin-top: 2px;
+}
+.tbl_txt.red {
+    color: #d72b20;
+}
 
 /* 테이블 border */
 .br {border-right: 1px solid #d4d4d4 !important;}
@@ -75,6 +82,9 @@
     font-size: 20px;
     color: #333;
 }
+.tit_box h4 {
+    font-weight: 400;
+}
 .tit_box.h_btn {
     justify-content: space-between;
     margin-bottom: 20px;
@@ -94,9 +104,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-}
-.detail_box .btn_box_group {
-    margin-top: 30px;
 }
 .btn_box_group.right {
     justify-content: flex-end;
@@ -344,6 +351,26 @@
     padding: 5px 10px;
     min-width: 0;
     border-radius: 5px 0 0 5px;
+}
+.file_group.type_2 .form_box.file_box {
+    gap: 5px;
+}
+.file_group.type_2 .form_box.file_box input[type="text"] {
+    width: calc(100% - 100px);
+    padding-right: 10px !important;
+}
+.file_group.type_2 .form_box.file_box label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    transform: translate(0);
+    min-width: 95px;
+    border-radius: 5px;
+    padding: 9px 20px;
+    font-size: 13px;
 }
 .form_box_group.address {
     align-items: inherit;
@@ -716,6 +743,14 @@
     font-size: 13px;
     font-weight: 300;
     color: #949494;
+}
+.pop_search_box > div.type_4 dl.colspan2 {
+    width: calc(50% - 10px);
+    min-width: calc(255px * 2);
+}
+.pop_search_box > div.type_4 dl.colspan3 {
+    width: calc(75% - 5px);
+    min-width: calc(255px * 3);
 }
 
 .layout .search_box {
