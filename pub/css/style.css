@@ -379,7 +379,8 @@ nav ul ul li a {
     font-size: 13px;
     color: #333;
 }
-nav ul ul li:hover a {
+nav ul ul li:hover a,
+nav ul ul li.on a {
     font-weight: 400;
     background-color: #f9f9f9;
     color: #0F2D76;
