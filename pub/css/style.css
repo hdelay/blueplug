@@ -1109,19 +1109,3 @@ footer p::before {
 .tit_box.h_btn .right .small_sel .sel_box .opt_list {
     top: 30px;
 }
-
-/* 알람 시뮬레이션 */
-.result_box h2 {
-    font-size: 16px;
-}
-
-/* 원격제어 */
-.txt_result {
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-}
-.txt_result span {
-    font-weight: 500;
-    margin: 0 5px 0 5px;
-}

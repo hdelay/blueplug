@@ -543,9 +543,6 @@
 .sel_box .opt_list li:hover {
     background-color: #f9f9f9;
 }
-.sel_box.disabled .label {
-    background-color: #ddd;
-}
 
 /* rdo_box 라디오박스 */
 .rdo_box {
@@ -619,24 +616,6 @@
 .rdo_box input.checked + label::after {
     background-color: #bfbfbf;
     transform: scale(1);
-}
-.rdo_box.solo {
-    justify-content: center;
-}
-.rdo_box.solo span {
-    width: auto;
-    min-height: 19px;
-    min-width: 0;
-}
-.rdo_box.solo input + label {
-    padding-left: 19px;
-}
-.rdo_box.type_2 {
-    gap: 25px;
-    flex-wrap: wrap;
-}
-.rdo_box.type_2 span {
-    width: auto;
 }
 
 /* chk_box 체크박스 */
@@ -790,10 +769,6 @@
     gap: 5px;
     margin: 20px 0 20px;
 }
-.pop_search_box.in {
-    padding: 0;
-    margin: 0;
-}
 .pop_search_box > div {
     display: flex;
     gap: 5px 20px;
@@ -833,12 +808,6 @@
     width: calc(100% - 89px);
     font-size: 14px;
     color: #333;
-}
-.pop_search_box.long > div dl dt {
-    width: 120px;
-}
-.pop_search_box.long > div dl dd {
-    width: calc(100% - 120px);
 }
 .pop_search_box > div dl dt label {
     font-size: 13px;
