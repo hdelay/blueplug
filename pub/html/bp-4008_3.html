@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루플러그</title>
+
+    <!-- pub css -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon/favicon16.png" sizes="16x16"> 
+    <link rel="icon" href="../images/favicon/favicon32.png" sizes="32x32"> 
+    <link rel="icon" href="../images/favicon/favicon48.png" sizes="48x48"> 
+    <link rel="icon" href="../images/favicon/favicon64.png" sizes="64x64"> 
+    <link rel="icon" href="../images/favicon/favicon128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="../images/favicon/favicon144.png">
+    <link rel="shortcut icon" href="../images/favicon/favicon144.png">
+    <link rel="icon" href="../images/favicon.ico">
+
+
+</head>
+<body>
+<div class="wrap">
+
+<!-- header -->
+<header>
+        
+    <div class="side_top">
+        <h1 class="logo"><a href="">블루 플러그</a></h1>
+        <a href="" class="menu_slide_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <ul>
+        <li>
+            <span class="ico_time"></span>최종 접속일시
+            <div class="time_box">
+                <span>2023년 01월 31일</span>
+                <span>15:00:00</span>
+            </div>
+        </li>
+        <li>
+            <span class="ico_user"></span>
+            <strong>블루플러그</strong>님 환영합니다.
+        </li>
+        <li><button>로그아웃</button></li>
+    </ul>
+
+</header>
+<!-- //header -->
+
+<!-- right container -->
+<div class="container">
+
+    <!-- left menu -->
+    <aside>
+        <nav>
+            <ul>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_dashboard"></span>
+                        <strong>대시보드</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">모니터링 메인</a></li>
+                        <li><a href="">고장 모니터링</a></li>
+                        <li><a href="">클레임 조치 모니터링</a></li>
+                        <li><a href="">부품 교환 모니터링</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_system"></span>
+                        <strong>시스템 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">계정관리</a></li>
+                        <li><a href="">메뉴 접근 권한 관리</a></li>
+                        <li><a href="">코드 관리</a></li>
+                        <li><a href="">접속 로그 조회</a></li>
+                        <li><a href="">점검리포트 양식 관리</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_chargeadd"></span>
+                        <strong>모델 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">CPO 모델</a></li>
+                        <li><a href="">충전포스트 모델</a></li>
+                        <li><a href="">파워뱅크 모델</a></li>
+                        <li><a href="">부품 모델</a></li>
+                        <li><a href="">부품 그룹</a></li>
+                        <li><a href="">변수 모델</a></li>
+                        <li><a href="">알람 모델</a></li>
+                        <li><a href="">알람 그룹</a></li>
+                        <li><a href="">알람 시뮬레이션</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_object"></span>
+                        <strong>컴포넌트 관리</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">충전소 등록/조회</a></li>
+                        <li><a href="">충전포스트 등록/조회</a></li>
+                        <li><a href="">파워뱅크 등록/조회</a></li>
+                        <li><a href="">충전포스트-파워뱅크 연결</a></li>
+                        <li><a href="">부품 등록/조회</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_control"></span>
+                        <strong>관제</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">현황 모니터링</a></li>
+                        <li><a href="">충전 프로파일 로그</a></li>
+                        <li><a href="">충전기 이벤트 로그</a></li>
+                        <li><a href="">서버 이벤트 로그</a></li>
+                        <li><a href="">원격 제어</a></li>
+                        <li><a href="">부품 현황 조회/교체</a></li>
+                        <li><a href="">부품 교환 이력</a></li>
+                        <li><a href="">클레임 조치 등록/조회</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <a href="javascript:void(0);" class="acc_btn">
+                        <span class="ico_stationcheck"></span>
+                        <strong>점검</strong>
+                    </a>
+                    <ul>
+                        <li><a href="">점검리포트 작성/조회</a></li>
+                        <li><a href="">EOL 점검</a></li>
+                        <li><a href="">EOL 점검 이력</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <footer>
+            <p>COPYRIGHT © HYUNDAI KEFICO COMPANY. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </aside>
+    <!-- //left menu -->
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- 제목 -->
+        <div class="tit_box h_btn">
+            <div class="left">
+                <h2>클레임 조치 등록/조회</h2>
+            </div>
+            <div class="right">
+                <div class="btn_box_group">
+                    <div class="btn_box">
+                        <button class="btn_blue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상세페이지 -->
+        <div class="detail_box">
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn">
+                <div class="left">
+                    <h4>이벤트 추가</h4>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">이벤트 추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">충전소명</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">충전소ID</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                    <button class="label"><span>전체</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">내용</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">이벤트설명</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" placeholder="클릭하여 값을 입력하세요.">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>클레임 발생 위치</h4>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">충전소 검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">충전소명</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">충전소ID</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">포스트/뱅크 구분</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">포스트/뱅크 S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>고장/장애 정보</h4>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">고장구분</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">포스트/뱅크 S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box disabled">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">조치구분</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box disabled">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">발생일</label></th>
+                            <td>
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day" placeholder="YYYY-MM-DD" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">오류내역</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="" placeholder="클릭하여 값을 입력하세요.">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>조치내역</h4>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">조치상태</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">수리기간(일)</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                                <div class="tbl_txt red">* 숫자만 입력 가능 / 소수점 1자리까지 입력 가능</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">고장인입경로</label></th>
+                            <th scope="row"><label for="">유효성검증</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">이벤트 ID</label></th>
+                            <th scope="row"><label for="">조치일</label></th>
+                            <td>
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day" placeholder="YYYY-MM-DD">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">출장비</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt10">
+                <div class="left">
+                    <h5>교체부품정보</h5>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">부품교환이력추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">부품모델명</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">케피코품번</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">업체품번</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">부품교체비용</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="이벤트를 추가해주세요." disabled>
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">이벤트내용</label></th>
+                            <th scope="row"><label for="">교체전부품S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">교체후부품S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">등록자</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="이벤트를 추가해주세요." disabled>
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--  -->
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt10">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">개선담당자 추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop_search_box">
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="sel_01">개선담당자</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="개선담당자를 추가하세요." disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="sel_01">개선담당부서</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="개선담당자를 추가하세요." disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>첨부파일</h4>
+                </div>
+                <div class="right"></div>
+            </div>
+
+            <!-- 첨부파일 -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dd>
+                            <div class="form_box_group file_group type_2">
+                                <div class="form_box file_box">
+                                    <input type="file" id="file_inp" class="file_inp">
+                                    <input type="text" class="file_txt">
+                                    <label for="file_inp">업로드</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="sel_01">사진 업로드</label></dt>
+                        <dd>
+                            <div class="pop_search_box in">
+                                <div class="type_2">
+                                    <dl>
+                                        <dt><label for="sel_01">교체전사진</label></dt>
+                                        <dd>
+                                            <div class="form_box_group file_group type_2">
+                                                <div class="form_box file_box">
+                                                    <input type="file" id="file_inp2" class="file_inp">
+                                                    <input type="text" class="file_txt">
+                                                    <label for="file_inp2">업로드</label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><label for="sel_01">교체후사진</label></dt>
+                                        <dd>
+                                            <div class="form_box_group file_group type_2">
+                                                <div class="form_box file_box">
+                                                    <input type="file" id="file_inp3" class="file_inp">
+                                                    <input type="text" class="file_txt">
+                                                    <label for="file_inp3">업로드</label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="" class="btn_gray">삭제</a>
+                </div>
+                <div class="btn_box">
+                    <a href="" class="btn_blue">저장</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- //right container -->
+
+</div>
+
+<!-- 담당자 변경 팝업 -->
+<div id="pop_manager_change" class="pop_box_group">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>담당자 변경</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+    
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt10">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="inp_01">Member ID</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_01">Name</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="date_range2">연락처</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_01">소속</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="date_range2">권한</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>전체</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">내용</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_01">부서명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- 결과 -->
+            <div class="tbl_group">
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Member ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">연락처</th>
+                                <th scope="col">소속</th>
+                                <th scope="col">부서명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="agn_l">blueplug@hyundai.co.kr</td>
+                                <td class="agn_l">블루플러그</td>
+                                <td>010-1234-5678</td>
+                                <td class="agn_l">현대케피코</td>
+                                <td class="agn_l">EV충전기개발팀</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_gray pop_close">삭제</a>
+                </div>
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- CHP 등록 팝업 -->
+<div id="pop_chp_add" class="pop_box_group big">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>CHP 등록</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+
+            <!-- 이동가능 -->
+            <div class="layout gap50">
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>"남양연구소_1"등록 CHP목록</h4>
+                        </div>
+                    </div>
+
+                    <!-- 테이블 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box h450">
+                            <table>
+                                <caption>검색 결과 테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="5%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">CHP ID</th>
+                                        <th scope="col">CHP Object</th>
+                                        <th scope="col">CHP 명</th>
+                                        <th scope="col">등록일시</th>
+                                        <th scope="col">PB 수</th>
+                                        <th scope="col">PB ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="movement_box">
+                    <button class="plus">+</button>
+                    <button class="minus">-</button>
+                </div>
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>등록가능 CHP목록</h4>
+                        </div>
+                        <div class="right">
+                            <div class="btn_box_group">
+                                <div class="btn_box">
+                                    <button class="btn_black">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 검색박스 -->
+                    <div class="pop_search_box">
+                        <div class="type_2">
+                            <dl>
+                                <dt><label for="inp_01">CHP ID</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="inp_01">CHP 명</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_2">
+                            <dl>
+                                <dt><label for="date_range2">CHP Object</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="inp_01">PB ID</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_2">
+                            <dl>
+                                <dt><label for="date_range2">CPO</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>전체</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">내용</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="inp_01">담당자</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- 테이블 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box h250">
+                            <table>
+                                <caption>검색 결과 테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="5%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">CHP ID</th>
+                                        <th scope="col">CHP Object</th>
+                                        <th scope="col">CHP 명</th>
+                                        <th scope="col">등록일시</th>
+                                        <th scope="col">PB 수</th>
+                                        <th scope="col">PB ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>2023_HMG_A_2ch</td>
+                                        <td>남양연구소A01</td>
+                                        <td>2023.01.01 11:15</td>
+                                        <td>3</td>
+                                        <td>HMGPB_291901<br/>HMGPB_291901<br/>HMGPB_291903</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+    
+            <!--  -->
+            <div class="layout">
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>"HMF_A_0003"포스트 상세정보</h4>
+                        </div>
+                    </div>
+
+                    <!-- 테이블 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box">
+                            <table>
+                                <caption>검색 결과 테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">PB ID</th>
+                                        <th scope="col">PB 명</th>
+                                        <th scope="col">할당CP ID</th>
+                                        <th scope="col">할당 충전소</th>
+                                        <th scope="col">등록일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>"HMG_Btyp_03"포스트 상세정보</h4>
+                        </div>
+                    </div>
+
+                    <!-- 테이블 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box">
+                            <table>
+                                <caption>검색 결과 테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                    <col width="19%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">PB ID</th>
+                                        <th scope="col">PB 명</th>
+                                        <th scope="col">할당CP ID</th>
+                                        <th scope="col">할당 충전소</th>
+                                        <th scope="col">등록일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="agn_l">HMG_SFC_BP2023__2CH_1</td>
+                                        <td>A형 2채널 PB</td>
+                                        <td>HMG_A_0001</td>
+                                        <td>남양연구소_1</td>
+                                        <td>2023-01-15 15:20:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_grayline pop_close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- pub js -->
+<script src="../js/common.js" defer></script>
+
+</body>
+</html>
