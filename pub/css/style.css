@@ -911,7 +911,13 @@ footer p::before {
     margin-top: 5px;
 }
 .tbl_search_group .search_box {
-    width: calc(100% - 35px);
+    width: calc(100% - 50px);
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.pop_search_box > .tbl_search_group {
+    gap: 5px;
 }
 .tbl_search_group .search_box div.type_1 dl {
     flex-direction: row;
@@ -919,6 +925,9 @@ footer p::before {
 }
 .tbl_search_group .search_box div.type_1 dl dd {
     width: calc(100% - 90px);
+}
+.tbl_search_group .btn_box {
+    width: 45px;
 }
 .tbl_search_group .btn_box > * {
     height: 100%;
