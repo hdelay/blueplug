@@ -537,20 +537,95 @@
                     <dl>
                         <dt><label for="inp_01">유형선택</label></dt>
                         <dd>
-                            <div class="form_box">
-                                <div class="sel_box top">
-                                    <button class="label"><span>전체</span></button>
-                                    <ul class="opt_list">
-                                        <li class="opt_item">리부팅</li>
-                                        <li class="opt_item">점검</li>
-                                    </ul>
-                                </div>
+                            <div class="rdo_box type_2">
+                                <span>
+                                    <input type="radio" id="radio_01" name="rdo_group_01">
+                                    <label for="radio_01">CHECK</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_02" name="rdo_group_01">
+                                    <label for="radio_02">재부팅</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_03" name="rdo_group_01">
+                                    <label for="radio_03">Derating</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_04" name="rdo_group_01">
+                                    <label for="radio_04">진단</label>
+                                </span>
                             </div>
                         </dd>
                     </dl>
                 </div>
             </div>
-    
+
+            <!-- Derating -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">최소전압</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">최대전압</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">최소전류</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">최대전류</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">충전시간</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">통신주기(ms)</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_02" placeholder="클릭하여 값을 입력하세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="txt_result">선택한 충전포스트에 <span>"진단"</span>제어문을 전송합니다.</div>
+
         </div>
     
         <div class="pop_footer">

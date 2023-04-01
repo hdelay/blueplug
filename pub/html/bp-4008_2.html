@@ -196,7 +196,7 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row"><label for="">충전소명</label></th>
+                            <th scope="row"><label for="">인입경로</label></th>
                             <td>
                                 <div class="form_box">
                                     <div class="sel_box">
@@ -207,7 +207,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <th scope="row"><label for="">충전소ID</label></th>
+                            <th scope="row"><label for="">이벤트ID</label></th>
                             <td>
                                 <div class="form_box">
                                     <div class="sel_box">
@@ -216,6 +216,57 @@
                                             <li class="opt_item">내용</li>
                                         </ul>
                                     </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">이벤트설명</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" placeholder="클릭하여 값을 입력하세요.">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>클레임 발생 위치</h4>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">충전소 검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">충전소명</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">충전소ID</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="" disabled>
                                 </div>
                             </td>
                         </tr>
@@ -223,28 +274,40 @@
                             <th scope="row"><label for="">포스트/뱅크 구분</label></th>
                             <td>
                                 <div class="form_box">
-                                    <div class="sel_box">
-                                        <button class="label"><span>전체</span></button>
-                                        <ul class="opt_list">
-                                            <li class="opt_item">내용</li>
-                                        </ul>
-                                    </div>
+                                    <input type="text" id="" disabled>
                                 </div>
                             </td>
                             <th scope="row"><label for="">포스트/뱅크 S/N</label></th>
                             <td>
                                 <div class="form_box">
-                                    <div class="sel_box">
-                                        <button class="label"><span>전체</span></button>
-                                        <ul class="opt_list">
-                                            <li class="opt_item">내용</li>
-                                        </ul>
-                                    </div>
+                                    <input type="text" id="" disabled>
                                 </div>
                             </td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>고장/장애 정보</h4>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
                         <tr>
-                            <th scope="row"><label for="">고장인입경로</label></th>
+                            <th scope="row"><label for="">고장구분</label></th>
                             <td>
                                 <div class="form_box">
                                     <div class="sel_box">
@@ -255,18 +318,190 @@
                                     </div>
                                 </div>
                             </td>
-                            <th scope="row"><label for="">이벤트 ID</label></th>
+                            <th scope="row"><label for="">출장구분</label></th>
                             <td>
                                 <div class="form_box">
-                                    <input type="text" id="inp_01" value="이벤트를 추가해주세요." disabled>
+                                    <div class="sel_box disabled">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row"><label for="">이벤트내용</label></th>
+                            <th scope="row"><label for="">조치구분</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box disabled">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">발생일</label></th>
+                            <td>
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day" placeholder="YYYY-MM-DD" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">오류내역</label></th>
                             <td colspan="3">
                                 <div class="form_box">
-                                    <input type="text" id="inp_01" value="이벤트를 추가해주세요." disabled>
+                                    <input type="text" id="" placeholder="클릭하여 값을 입력하세요.">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>조치내역</h4>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">조치상태</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">수리기간(일)</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                                <div class="tbl_txt red">* 숫자만 입력 가능 / 소수점 1자리까지 입력 가능</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">유효성검증</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="sel_box">
+                                        <button class="label"><span>전체</span></button>
+                                        <ul class="opt_list">
+                                            <li class="opt_item">내용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">조치일</label></th>
+                            <td>
+                                <div class="form_box date">
+                                    <input type="text" id="inp_day" placeholder="YYYY-MM-DD">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">출장비</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt10">
+                <div class="left">
+                    <h5>교체부품정보</h5>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">부품교환이력추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <div class="tbl_box">
+                <table>
+                    <caption>테이블</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">부품모델명</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">케피코품번</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">업체품번</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">부품교체비용</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">교체전부품S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">교체후부품S/N</label></th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">등록자</label></th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="text" id="inp_01" value="부품교환이력을 선택해주세요." disabled>
                                 </div>
                             </td>
                         </tr>
@@ -515,7 +750,48 @@
                 </table>
             </div>
 
-            <!--  -->
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt10">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_black">개선담당자 추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop_search_box">
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="sel_01">개선담당자</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="개선담당자를 추가하세요." disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="sel_01">개선담당부서</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="개선담당자를 추가하세요." disabled>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>첨부파일</h4>
+                </div>
+                <div class="right"></div>
+            </div>
+
+            <!-- 첨부파일 -->
             <div class="pop_search_box">
                 <div class="type_1">
                     <dl>
@@ -523,9 +799,44 @@
                         <dd>
                             <div class="form_box_group file_group type_2">
                                 <div class="form_box file_box">
-                                    <input type="file" id="file_inp" class="file_inp">
+                                    <input type="file" id="file_inp0" class="file_inp">
                                     <input type="text" class="file_txt">
-                                    <label for="file_inp">업로드</label>
+                                    <label for="file_inp0">업로드</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="sel_01">사진 업로드</label></dt>
+                        <dd>
+                            <div class="pop_search_box in">
+                                <div class="type_2">
+                                    <dl>
+                                        <dt><label for="sel_01">교체전사진</label></dt>
+                                        <dd>
+                                            <div class="form_box_group file_group type_2">
+                                                <div class="form_box file_box">
+                                                    <input type="file" id="file_inp2" class="file_inp">
+                                                    <input type="text" class="file_txt">
+                                                    <label for="file_inp2">업로드</label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><label for="sel_01">교체후사진</label></dt>
+                                        <dd>
+                                            <div class="form_box_group file_group type_2">
+                                                <div class="form_box file_box">
+                                                    <input type="file" id="file_inp3" class="file_inp">
+                                                    <input type="text" class="file_txt">
+                                                    <label for="file_inp3">업로드</label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
                             </div>
                         </dd>
@@ -533,6 +844,14 @@
                 </div>
             </div>
 
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="" class="btn_gray">삭제</a>
+                </div>
+                <div class="btn_box">
+                    <a href="" class="btn_blue">저장</a>
+                </div>
+            </div>
 
         </div>
 

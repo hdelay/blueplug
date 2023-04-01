@@ -368,10 +368,13 @@
                         <a href="javascript:void(0);" class="btn_grayline pop_open" data-target="#pop_partallupload">일괄업로드</a>
                     </div>
                     <div class="btn_box">
-                        <a href="" class="btn_grayline">엑셀다운로드</a>
+                        <a href="" class="btn_grayline">엑셀다운</a>
                     </div>
                     <div class="btn_box">
-                        <a href="javascript:void(0);" class="btn_blue pop_open" data-target="#pop_new_parts">부품등록</a>
+                        <a href="javascript:void(0);" class="btn_grayline pop_open" data-target="#pop_batchupload">일괄등록</a>
+                    </div>
+                    <div class="btn_box">
+                        <a href="javascript:void(0);" class="btn_blue pop_open" data-target="#pop_new_parts">개별등록</a>
                     </div>
                 </div>
             </div>
@@ -1208,13 +1211,13 @@
 </div>
 
 <!-- 부품일괄업로드 팝업 -->
-<div id="pop_partallupload" class="pop_box_group">
+<div id="pop_partallupload" class="pop_box_group small">
 
     <div class="pop_box">
         
         <div class="pop_header">
             <div class="tit_box">
-                <h3>부품일괄업로드</h3>
+                <h3>엑셀일괄업로드</h3>
             </div>
             <div class="close">
                 <div class="btn">
@@ -1226,34 +1229,94 @@
         <div class="pop_content">
 
             <!-- pop 검색박스 -->
-            <div class="pop_search_box">
-                <div class="type_2">
+            <div class="pop_search_box long">
+                <div class="type_1">
                     <dl>
-                        <dt><label for="inp_01">할당구분</label></dt>
+                        <dt><label for="inp_01">업로드 방식 선택</label></dt>
                         <dd>
-                            <div class="form_box">
-                                <div class="sel_box">
-                                    <button class="label"><span>포스트/뱅크/미할당</span></button>
-                                    <ul class="opt_list">
-                                        <li class="opt_item">포스트</li>
-                                        <li class="opt_item">뱅크</li>
-                                        <li class="opt_item">미할당</li>
-                                    </ul>
+                            <div class="rdo_box">
+                                <span>
+                                    <input type="radio" id="radio_01" name="rdo_group_01">
+                                    <label for="radio_01">개별등록</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="radio_02" name="rdo_group_01">
+                                    <label for="radio_02">일괄등록</label>
+                                </span>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- 개별등록 -->
+            <div class="pop_search_box">
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">업로드</label></dt>
+                        <dd>
+                            <div class="form_box_group file_group type_2">
+                                <div class="form_box file_box">
+                                    <input type="file" id="file_inp" class="file_inp">
+                                    <input type="text" class="file_txt">
+                                    <label for="file_inp">파일찾기</label>
                                 </div>
                             </div>
                         </dd>
                     </dl>
+                </div>
+            </div>
+
+            <!-- 일괄등록 -->
+            <div class="pop_search_box">
+                <div class="type_1">
                     <dl>
-                        <dt><label for="inp_02">모델</label></dt>
+                        <dt><label for="inp_02">양식다운로드</label></dt>
                         <dd>
-                            <div class="form_box">
-                                <div class="sel_box">
-                                    <button class="label"><span>선택</span></button>
-                                    <ul class="opt_list">
-                                        <li class="opt_item">포스트</li>
-                                        <li class="opt_item">뱅크</li>
-                                        <li class="opt_item">미할당</li>
-                                    </ul>
+                            <div class="pop_search_box in long">
+                                <div class="type_1">
+                                    <dl>
+                                        <dt><label for="inp_02">포스트/뱅크구분</label></dt>
+                                        <dd>
+                                            <div class="form_box">
+                                                <div class="sel_box">
+                                                    <button class="label"><span>전체</span></button>
+                                                    <ul class="opt_list">
+                                                        <li class="opt_item">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="type_1">
+                                    <dl>
+                                        <dt><label for="inp_02">포스트/뱅크모델</label></dt>
+                                        <dd>
+                                            <div class="form_box">
+                                                <div class="sel_box">
+                                                    <button class="label"><span>전체</span></button>
+                                                    <ul class="opt_list">
+                                                        <li class="opt_item">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_1">
+                    <dl>
+                        <dt><label for="inp_01">업로드</label></dt>
+                        <dd>
+                            <div class="form_box_group file_group type_2">
+                                <div class="form_box file_box">
+                                    <input type="file" id="file_inp2" class="file_inp">
+                                    <input type="text" class="file_txt">
+                                    <label for="file_inp2">파일찾기</label>
                                 </div>
                             </div>
                         </dd>
@@ -1266,17 +1329,572 @@
         <div class="pop_footer">
             <div class="btn_box_group center">
                 <div class="btn_box">
-                    <a href="javascript:void(0);" class="btn_grayline">업로드</a>
-                </div>
-                <div class="btn_box">
                     <a href="javascript:void(0);" class="btn_grayline" download>양식다운로드</a>
                 </div>
                 <div class="btn_box">
-                    <a href="javascript:void(0);" class="btn_blue pop_close">확인</a>
+                    <a href="javascript:void(0);" class="btn_blue">업로드</a>
                 </div>
             </div>
         </div>
 
+    </div>
+
+</div>
+
+<!-- 부품 일괄등록 팝업 -->
+<div id="pop_batchupload" class="pop_box_group big">
+
+    <div class="pop_box">
+        <div class="pop_header">
+            <div class="tit_box">
+                <h3>부품 일괄등록</h3>
+            </div>
+            <div class="close">
+                <div class="btn">
+                    <button class="pop_close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pop_content">
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn">
+                <div class="left">
+                    <h4>포스트/뱅크 조회</h4>
+                </div>
+                <div class="right">
+                    <div class="btn_box_group">
+                        <div class="btn_box">
+                            <button class="btn_grayline">선택</button>
+                        </div>
+                        <div class="btn_box">
+                            <button class="btn_black">검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- pop 검색박스 -->
+            <div class="pop_search_box">
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="inp_01">포스트S/N</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>HMG00001</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">내용</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_01">포스트명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <div class="sel_box">
+                                    <button class="label"><span>남양연구소A_01</span></button>
+                                    <ul class="opt_list">
+                                        <li class="opt_item">내용</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="type_2">
+                    <dl>
+                        <dt><label for="inp_01">파워뱅크S/N</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="inp_01">파워뱅크명</label></dt>
+                        <dd>
+                            <div class="form_box">
+                                <input type="text" id="inp_01" value="검색어를 입력해 주세요.">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- 게시판 -->
+            <div class="tbl_group">
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">포스트/뱅크구분</th>
+                                <th scope="col">포스트/뱅크S/N</th>
+                                <th scope="col">충전소연결</th>
+                                <th scope="col">충전소명</th>
+                                <th scope="col">충전소ID</th>
+                                <th scope="col">부품그룹</th>
+                                <th scope="col">등록자</th>
+                                <th scope="col">등록일자</th>
+                                <th scope="col">납품일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+
+            <!-- 제목 -->
+            <div class="tit_box h_btn mt30">
+                <div class="left">
+                    <h4>일괄등록 대상 포스트/뱅크 선택</h4>
+                </div>
+            </div>
+
+            <!-- 게시판 -->
+            <div class="tbl_group">
+        
+                <div class="tbl_box">
+                    <table>
+                        <caption>테이블</caption>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">포스트/뱅크구분</th>
+                                <th scope="col">포스트/뱅크S/N</th>
+                                <th scope="col">충전소연결</th>
+                                <th scope="col">충전소명</th>
+                                <th scope="col">충전소ID</th>
+                                <th scope="col">부품그룹</th>
+                                <th scope="col">등록자</th>
+                                <th scope="col">등록일자</th>
+                                <th scope="col">납품일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="agn_l">포스트</td>
+                                <td class="agn_l">KF_BP_SFC_2301</td>
+                                <td>Y</td>
+                                <td class="agn_l">남양연구소A_01</td>
+                                <td class="agn_l">HMG000001-01</td>
+                                <td>2023_케피코</td>
+                                <td>홍길동</td>
+                                <td>2023-01-31</td>
+                                <td>2023-02-05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+
+            <div class="layout mt30">
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>선택 포스트/뱅크 부품 등록</h4>
+                        </div>
+                    </div>
+
+                    <!-- 게시판 -->
+                    <div class="tbl_group">
+                
+                        <div class="tbl_box">
+                            <table>
+                                <caption>테이블</caption>
+                                <colgroup>
+                                    <col width="5%">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">선택</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">부품타입</th>
+                                        <th scope="col">케피코품번</th>
+                                        <th scope="col">업체품번</th>
+                                        <th scope="col">부품종류구분</th>
+                                        <th scope="col">S/N</th>
+                                        <th scope="col">등록자</th>
+                                        <th scope="col">등록일자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="rdo_box solo">
+                                                <span>
+                                                    <input type="radio" id="rdo_01">
+                                                    <label for="rdo_01">&nbsp;</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>개발품</td>
+                                        <td class="agn_l">KF_CH_2301_PA01</td>
+                                        <td class="agn_l">2301265509_KF_1210</td>
+                                        <td>제어기</td>
+                                        <td class="agn_l">A100100114140</td>
+                                        <td>홍길동</td>
+                                        <td>2023-01-31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="paging_box">
+                            <ul>
+                                <li class="prev_all"><a href="" title="최신페이지로 이동"></a></li>
+                                <li class="prev"><a href="" title="이전페이지로 이동"></a></li>
+                                <li class="on"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="">10</a></li>
+                                <li><a href="">100</a></li>
+                                <li><a href="">1000</a></li>
+                                <li><a href="">9</a></li>
+                                <li><a href="">10</a></li>
+                                <li class="next"><a href="" title="다음페이지로 이동"></a></li>
+                                <li class="next_all"><a href="" title="마지막페이지로 이동"></a></li>
+                            </ul>
+                        </div>
+            
+                    </div>
+
+                </div>
+
+                <div class="l50">
+
+                    <!-- 제목 -->
+                    <div class="tit_box h_btn">
+                        <div class="left">
+                            <h4>선택 부품 정보</h4>
+                        </div>
+                    </div>
+
+                    <!-- pop 검색박스 -->
+                    <div class="pop_search_box">
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품사용구분</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="충전포스트" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품타입</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="개발품" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">케피코품번</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="KF_CH_2301_PA01" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">업체품번</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="2301265509_KF_1210" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품종류구분</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="제어기" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품명</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="메인제어ASSY" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">제조사</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="현대케피코" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품수명</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="15개월" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품상태</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <div class="sel_box">
+                                            <button class="label"><span>Live</span></button>
+                                            <ul class="opt_list">
+                                                <li class="opt_item">내용</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품S/N</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="A100100115150">
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="type_1">
+                            <dl>
+                                <dt><label for="inp_01">부품비용(원)</label></dt>
+                                <dd>
+                                    <div class="form_box">
+                                        <input type="text" id="inp_01" value="895,000" disabled>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+    
+        </div>
+    
+        <div class="pop_footer">
+            <div class="btn_box_group center">
+                <div class="btn_box">
+                    <a href="javascript:void(0);" class="btn_blue pop_close">저장</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
