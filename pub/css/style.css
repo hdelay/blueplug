@@ -699,6 +699,10 @@ footer p::before {
     border-bottom: 1px solid #949494;
     transition: .2s;
 }
+.login_inp input[type="password"]::-ms-reveal,
+.login_inp input[type="password"]::-ms-clear {
+    display: none;
+}
 .login_inp input:focus {
     border-radius: 10px;
     border: 1px solid #002C5F;
