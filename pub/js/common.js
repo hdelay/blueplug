@@ -79,18 +79,22 @@ window.onload = function(){
     }
 
     // 로그인 패스워드 보기
-    const login_pw_eyebtn = document.querySelector('.ico_eye');
+    const login_pw_eyebtn = document.querySelectorAll('.ico_eye');
     if(login_pw_eyebtn){
-        login_pw_eyebtn.addEventListener('click', function() {
-            const previnp = this.previousSibling.previousSibling;
-            if(previnp.getAttribute('type') === 'password'){
-                previnp.setAttribute('type', 'text');
-                this.classList.add('on')
-            } else {
-                previnp.setAttribute('type', 'password');
-                this.classList.remove('on')
-            }
-        });
+        for(i = 0; i < login_pw_eyebtn.length; i++){
+            login_pw_eyebtn[i].addEventListener('click', function() {
+                const previnp = this.previousSibling.previousSibling;
+                console.log(previnp);
+                if(previnp.getAttribute('type') === 'password'){
+                    previnp.setAttribute('type', 'text');
+                    this.classList.add('on')
+                } else {
+                    previnp.setAttribute('type', 'password');
+                    this.classList.remove('on')
+                }
+            });
+        }
+        
     }
     
     // 파일업로드

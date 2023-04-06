@@ -714,7 +714,7 @@ footer p::before {
     font-size: 12px;
     color: #CE0000;
 }
-.login_inp .inp_pw .ico_eye {
+.inp_pw .ico_eye {
     display: block;
     position: absolute;
     top: 50%;
@@ -726,8 +726,14 @@ footer p::before {
     transform: translateY(-50%);
     cursor: pointer;
 }
-.login_inp .inp_pw .ico_eye.on {
+.inp_pw .ico_eye.on {
     background: #002C5F url(../images/ico/ico_pweye_on.svg) no-repeat center;
+}
+.form_box.inp_pw {
+    position: relative;
+}
+.form_box.inp_pw .ico_eye {
+    border: none;
 }
 .inp_certification {
     display: flex;
