@@ -1101,9 +1101,11 @@
     width: calc(100% - 110px);
     font-size: 13px;
 }
+/* 20220508 수정 */
 .type_1 .chklist_item .tit {
-    width: auto;
     width: calc(100% - 225px);
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 .chklist_item .tit .txt_danger {
     justify-content: flex-start;
