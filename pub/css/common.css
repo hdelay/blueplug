@@ -1113,8 +1113,10 @@
 .chklist_item .rdo_box {
     gap: 0 20px;
 }
+/* 20220508 수정 */
 .chklist_item .rdo_box span {
     width: auto;
+    align-items: center;
 }
 .type_1 .chklist_item .form_box input {
     width: 200px;
